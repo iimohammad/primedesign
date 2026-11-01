@@ -1,0 +1,41 @@
+{
+  "name": "@primedesign/css",
+  "version": "0.1.0",
+  "description": "PrimeDesign standalone CSS and semantic design tokens",
+  "type": "module",
+  "main": "./dist/primedesign.css",
+  "style": "./dist/primedesign.css",
+  "exports": {
+    ".": "./dist/primedesign.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./base.css": "./dist/base.css",
+    "./components.css": "./dist/components.css",
+    "./commerce.css": "./dist/commerce.css",
+    "./nofont.css": "./dist/nofont.css",
+    "./font.css": "./dist/font.css",
+    "./fonts/*": "./dist/fonts/*"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@primedesign/tokens": "0.1.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iimohammad/primedesign.git",
+    "directory": "packages/css"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

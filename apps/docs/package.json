@@ -1,0 +1,25 @@
+{
+  "name": "@primedesign/docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@primedesign/tokens": "0.1.0",
+    "@primedesign/css": "0.1.0",
+    "@primedesign/persian": "0.1.0",
+    "@primedesign/icons": "0.1.0",
+    "@primedesign/react": "0.1.0",
+    "@primedesign/forms": "0.1.0",
+    "@primedesign/data": "0.1.0",
+    "@primedesign/commerce": "0.1.0",
+    "@primedesign/blocks": "0.1.0",
+    "react": "^18.3.0 || ^19.0.0",
+    "react-dom": "^18.3.0 || ^19.0.0"
+  }
+}

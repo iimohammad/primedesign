@@ -1,0 +1,4473 @@
+[
+  {
+    "package": "blocks",
+    "name": "AppShell",
+    "kind": "component",
+    "signature": "AppShell({ logo, sidebar, header, children, className, }: { logo: ReactNode; sidebar: ReactNode; header?: ReactNode; children: ReactNode; className?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "logo",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "sidebar",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "header",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "AuthCard",
+    "kind": "component",
+    "signature": "AuthCard({ title, description, onSubmit, logo, footer, }: { title: string; description?: string | undefined; onSubmit: (values: { email: string; password: string; }) => void | Promise<void>; logo?: ReactNode; footer?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onSubmit",
+        "type": "(values: { email: string; password: string; }) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "logo",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "ConversationView",
+    "kind": "component",
+    "signature": "ConversationView({ title, messages, onSend, subtitle, actions, sending, }: { title: string; subtitle?: string | undefined; messages: Message[]; onSend: (text: string) => void | Promise<void>; actions?: ReactNode; sending?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "subtitle",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "messages",
+        "type": "Message[]",
+        "required": true
+      },
+      {
+        "name": "onSend",
+        "type": "(text: string) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "actions",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "sending",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "DashboardNav",
+    "kind": "component",
+    "signature": "DashboardNav({ items, active, onSelect, }: { items: SideNavItem[]; active: string; onSelect: (id: string) => void; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "SideNavItem[]",
+        "required": true
+      },
+      {
+        "name": "active",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(id: string) => void",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "FileCard",
+    "kind": "component",
+    "signature": "FileCard({ name, size, type, onDownload, onRemove, }: { name: string; size: string; type?: string | undefined; onDownload?: (() => void) | undefined; onRemove?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "type",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onDownload",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onRemove",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "InboxLayout",
+    "kind": "component",
+    "signature": "InboxLayout({ list, conversation, showConversation, onBack, }: { list: ReactNode; conversation: ReactNode; showConversation?: boolean | undefined; onBack?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "list",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "conversation",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "showConversation",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onBack",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "NotificationCenter",
+    "kind": "component",
+    "signature": "NotificationCenter({ items, onRead, onReadAll, }: { items: { id: string; title: string; description?: string | undefined; date: string; read?: boolean | undefined; }[]; onRead: (id: string) => void; onReadAll?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "{ id: string; title: string; description?: string | undefined; date: string; read?: boolean | undefined; }[]",
+        "required": true
+      },
+      {
+        "name": "onRead",
+        "type": "(id: string) => void",
+        "required": true
+      },
+      {
+        "name": "onReadAll",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "PageHeader",
+    "kind": "component",
+    "signature": "PageHeader({ eyebrow, title, description, actions, breadcrumb, }: { eyebrow?: string | undefined; title: string; description?: string | undefined; actions?: ReactNode; breadcrumb?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "eyebrow",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "actions",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "breadcrumb",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "PricingCard",
+    "kind": "component",
+    "signature": "PricingCard({ title, description, price, currency, period, features, highlighted, action, }: { title: string; description?: string | undefined; price: number; currency?: MoneyCurrency | undefined; period?: string | undefined; features: { label: string; included: boolean; }[]; highlighted?: boolean | undefined; action: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "price",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "currency",
+        "type": "MoneyCurrency | undefined",
+        "required": false
+      },
+      {
+        "name": "period",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "features",
+        "type": "{ label: string; included: boolean; }[]",
+        "required": true
+      },
+      {
+        "name": "highlighted",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "action",
+        "type": "ReactNode",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "TicketList",
+    "kind": "component",
+    "signature": "TicketList({ tickets, selected, onSelect, }: { tickets: Ticket[]; selected?: string | undefined; onSelect: (id: string) => void; }): Element",
+    "props": [
+      {
+        "name": "tickets",
+        "type": "Ticket[]",
+        "required": true
+      },
+      {
+        "name": "selected",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onSelect",
+        "type": "(id: string) => void",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "UserMenu",
+    "kind": "component",
+    "signature": "UserMenu({ name, email, avatar, items, }: { name: string; email?: string | undefined; avatar?: string | undefined; items: MenuAction[]; }): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "email",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "avatar",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "items",
+        "type": "MenuAction[]",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "AddressCard",
+    "kind": "component",
+    "signature": "AddressCard({ name, phone, address, postalCode, selected, onSelect, onEdit, }: { name: string; phone: string; address: string; postalCode?: string | undefined; selected?: boolean | undefined; onSelect?: (() => void) | undefined; onEdit?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "phone",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "postalCode",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "selected",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onSelect",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onEdit",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "BrandCard",
+    "kind": "component",
+    "signature": "BrandCard({ name, logo, description, href, }: { name: string; logo?: string | undefined; description?: string | undefined; href?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "logo",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "href",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "calculateCart",
+    "kind": "function",
+    "signature": "calculateCart(items: CartItem[], { shipping, discount, tax, }?: { shipping?: number | undefined; discount?: number | undefined; tax?: number | undefined; }): { subtotal: number; discount: number; shipping: number; tax: number; total: number; count: number; }",
+    "props": []
+  },
+  {
+    "package": "commerce",
+    "name": "cartKey",
+    "kind": "function",
+    "signature": "cartKey(productId: string, variantId?: string | undefined): string",
+    "props": []
+  },
+  {
+    "package": "commerce",
+    "name": "CartLineItem",
+    "kind": "component",
+    "signature": "CartLineItem({ item, onQuantityChange, onRemove, }: { item: CartItem; onQuantityChange: (quantity: number) => void; onRemove: () => void; }): Element",
+    "props": [
+      {
+        "name": "item",
+        "type": "CartItem",
+        "required": true
+      },
+      {
+        "name": "onQuantityChange",
+        "type": "(quantity: number) => void",
+        "required": true
+      },
+      {
+        "name": "onRemove",
+        "type": "() => void",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "CartProvider",
+    "kind": "component",
+    "signature": "CartProvider({ children, initialItems, onItemsChange, }: { children: ReactNode; initialItems?: CartItem[] | undefined; onItemsChange?: ((items: CartItem[]) => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "initialItems",
+        "type": "CartItem[] | undefined",
+        "required": false
+      },
+      {
+        "name": "onItemsChange",
+        "type": "((items: CartItem[]) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "cartReducer",
+    "kind": "function",
+    "signature": "cartReducer(items: CartItem[], action: CartAction): CartItem[]",
+    "props": []
+  },
+  {
+    "package": "commerce",
+    "name": "CartSummary",
+    "kind": "component",
+    "signature": "CartSummary({ items, shipping, discount, tax, currency, onCheckout, loading, footer, }: { items: CartItem[]; shipping?: number | undefined; discount?: number | undefined; tax?: number | undefined; currency?: MoneyCurrency | undefined; onCheckout?: (() => void | Promise<void>) | undefined; loading?: boolean | undefined; footer?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "CartItem[]",
+        "required": true
+      },
+      {
+        "name": "shipping",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "discount",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "tax",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "currency",
+        "type": "MoneyCurrency | undefined",
+        "required": false
+      },
+      {
+        "name": "onCheckout",
+        "type": "(() => void | Promise<void>) | undefined",
+        "required": false
+      },
+      {
+        "name": "loading",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "CategoryCard",
+    "kind": "component",
+    "signature": "CategoryCard({ title, count, image, icon, href, onClick, }: { title: string; count?: number | undefined; image?: string | undefined; icon?: \"grid\" | \"search\" | \"plus\" | \"minus\" | \"close\" | \"check\" | \"chevronDown\" | \"chevronUp\" | \"chevronRight\" | \"chevronLeft\" | \"arrowLeft\" | \"arrowRight\" | \"cart\" | \"bag\" | \"heart\" | \"star\" | \"box\" | \"truck\" | \"shield\" | \"calendar\" | \"clock\" | \"user\" | \"users\" | \"bell\" | \"message\" | \"mail\" | \"settings\" | \"moon\" | \"sun\" | \"menu\" | \"more\" | \"filter\" | \"sort\" | \"download\" | \"upload\" | \"trash\" | \"edit\" | \"copy\" | \"eye\" | \"lock\" | \"info\" | \"warning\" | \"chart\" | \"code\" | \"layers\" | \"sparkles\" | \"creditCard\" | \"tag\" | \"compare\" | \"refresh\" | \"globe\" | \"link\" | undefined; href?: string | undefined; onClick?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "count",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "image",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "\"grid\" | \"search\" | \"plus\" | \"minus\" | \"close\" | \"check\" | \"chevronDown\" | \"chevronUp\" | \"chevronRight\" | \"chevronLeft\" | \"arrowLeft\" | \"arrowRight\" | \"cart\" | \"bag\" | \"heart\" | \"star\" | \"box\" | \"truck\" | \"shield\" | \"calendar\" | \"clock\" | \"user\" | \"users\" | \"bell\" | \"message\" | \"mail\" | \"settings\" | \"moon\" | \"sun\" | \"menu\" | \"more\" | \"filter\" | \"sort\" | \"download\" | \"upload\" | \"trash\" | \"edit\" | \"",
+        "required": false
+      },
+      {
+        "name": "href",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onClick",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "CheckoutStepper",
+    "kind": "component",
+    "signature": "CheckoutStepper({ current }: { current: number; }): Element",
+    "props": [
+      {
+        "name": "current",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "ColorSwatches",
+    "kind": "component",
+    "signature": "ColorSwatches({ variants, value, onValueChange, label, disabled, }: { variants: ProductVariant[]; value: string; onValueChange: (id: string) => void; label: string; disabled?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "variants",
+        "type": "ProductVariant[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(id: string) => void",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "CompareProvider",
+    "kind": "component",
+    "signature": "CompareProvider({ children, max }: { children: ReactNode; max?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "CompareTable",
+    "kind": "component",
+    "signature": "CompareTable({ products, onRemove, }: { products: Product[]; onRemove?: ((id: string) => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "products",
+        "type": "Product[]",
+        "required": true
+      },
+      {
+        "name": "onRemove",
+        "type": "((id: string) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "CouponInput",
+    "kind": "component",
+    "signature": "CouponInput({ onApply, appliedCode, onRemove, }: { onApply: (code: string) => void | Promise<void>; appliedCode?: string | undefined; onRemove?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "onApply",
+        "type": "(code: string) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "appliedCode",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onRemove",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "DiscountBadge",
+    "kind": "component",
+    "signature": "DiscountBadge({ price, originalPrice }: { price: number; originalPrice: number; }): Element | null",
+    "props": [
+      {
+        "name": "price",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "originalPrice",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "FreeShippingProgress",
+    "kind": "component",
+    "signature": "FreeShippingProgress({ subtotal, threshold, }: { subtotal: number; threshold: number; }): Element",
+    "props": [
+      {
+        "name": "subtotal",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "threshold",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "itemPrice",
+    "kind": "function",
+    "signature": "itemPrice(item: CartItem): number",
+    "props": []
+  },
+  {
+    "package": "commerce",
+    "name": "itemStock",
+    "kind": "function",
+    "signature": "itemStock(product: Product, variant?: ProductVariant | undefined): number",
+    "props": []
+  },
+  {
+    "package": "commerce",
+    "name": "MiniCart",
+    "kind": "component",
+    "signature": "MiniCart({ open, onOpenChange, onCheckout, shippingThreshold, }: { open: boolean; onOpenChange: (v: boolean) => void; onCheckout?: (() => void) | undefined; shippingThreshold?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(v: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "onCheckout",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "shippingThreshold",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "OrderCard",
+    "kind": "component",
+    "signature": "OrderCard({ number, date, status, items, total, currency, onDetails, }: { number: string; date: string; status: \"pending\" | \"processing\" | \"shipped\" | \"delivered\" | \"canceled\"; items: { title: string; image?: string | undefined; quantity: number; }[]; total: number; currency?: MoneyCurrency | undefined; onDetails?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "number",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "date",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "\"pending\" | \"processing\" | \"shipped\" | \"delivered\" | \"canceled\"",
+        "required": true
+      },
+      {
+        "name": "items",
+        "type": "{ title: string; image?: string | undefined; quantity: number; }[]",
+        "required": true
+      },
+      {
+        "name": "total",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "currency",
+        "type": "MoneyCurrency | undefined",
+        "required": false
+      },
+      {
+        "name": "onDetails",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "OrderTracking",
+    "kind": "component",
+    "signature": "OrderTracking({ steps, }: { steps: { id: string; title: string; description?: string | undefined; date?: string | undefined; }[]; }): Element",
+    "props": [
+      {
+        "name": "steps",
+        "type": "{ id: string; title: string; description?: string | undefined; date?: string | undefined; }[]",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "Price",
+    "kind": "component",
+    "signature": "Price({ value, original, currency, size, }: { value: number; original?: number | undefined; currency?: MoneyCurrency | undefined; size?: \"sm\" | \"md\" | \"lg\" | undefined; }): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "original",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "currency",
+        "type": "MoneyCurrency | undefined",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\" | \"lg\" | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "ProductCard",
+    "kind": "component",
+    "signature": "ProductCard({ product: p, layout, onAddToCart, onQuickView, onWishlistChange, wishlisted, onCompareChange, compared, className, }: ProductCardProps): Element",
+    "props": [
+      {
+        "name": "product",
+        "type": "Product",
+        "required": true
+      },
+      {
+        "name": "layout",
+        "type": "ProductCardLayout | undefined",
+        "required": false
+      },
+      {
+        "name": "onAddToCart",
+        "type": "((product: Product, quantity: number, variant?: ProductVariant | undefined) => void | Promise<void>) | undefined",
+        "required": false
+      },
+      {
+        "name": "onQuickView",
+        "type": "((product: Product) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onWishlistChange",
+        "type": "((product: Product) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "wishlisted",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onCompareChange",
+        "type": "((product: Product) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "compared",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "ProductCardSkeleton",
+    "kind": "component",
+    "signature": "ProductCardSkeleton({ layout }: { layout?: ProductCardLayout | undefined; }): Element",
+    "props": [
+      {
+        "name": "layout",
+        "type": "ProductCardLayout | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "ProductGallery",
+    "kind": "component",
+    "signature": "ProductGallery({ images, title, }: { images: { src: string; alt: string; }[]; title: string; }): Element",
+    "props": [
+      {
+        "name": "images",
+        "type": "{ src: string; alt: string; }[]",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "ProductGrid",
+    "kind": "component",
+    "signature": "ProductGrid({ products, loading, columns, ...cardProps }: Omit<ProductCardProps, \"product\"> & { products: Product[]; loading?: boolean | undefined; columns?: 3 | 2 | 4 | undefined; }): Element",
+    "props": [
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "layout",
+        "type": "ProductCardLayout | undefined",
+        "required": false
+      },
+      {
+        "name": "onAddToCart",
+        "type": "((product: Product, quantity: number, variant?: ProductVariant | undefined) => void | Promise<void>) | undefined",
+        "required": false
+      },
+      {
+        "name": "onQuickView",
+        "type": "((product: Product) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onWishlistChange",
+        "type": "((product: Product) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "wishlisted",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onCompareChange",
+        "type": "((product: Product) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "compared",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "products",
+        "type": "Product[]",
+        "required": true
+      },
+      {
+        "name": "loading",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "columns",
+        "type": "3 | 2 | 4 | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "ProductImage",
+    "kind": "component",
+    "signature": "ProductImage({ src, alt, className, }: { src?: string | undefined; alt: string; className?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "src",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "PromoCard",
+    "kind": "component",
+    "signature": "PromoCard({ eyebrow, title, description, action, image, tone, }: { eyebrow?: string | undefined; title: string; description?: string | undefined; action?: ReactNode; image?: string | undefined; tone?: \"brand\" | \"dark\" | \"warm\" | undefined; }): Element",
+    "props": [
+      {
+        "name": "eyebrow",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "action",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "image",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "tone",
+        "type": "\"brand\" | \"dark\" | \"warm\" | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "QuickView",
+    "kind": "component",
+    "signature": "QuickView({ product, open, onOpenChange, onAddToCart, }: { product: Product | null; open: boolean; onOpenChange: (v: boolean) => void; onAddToCart: (product: Product, quantity: number, variant?: ProductVariant | undefined) => void | Promise<void>; }): Element",
+    "props": [
+      {
+        "name": "product",
+        "type": "Product | null",
+        "required": true
+      },
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(v: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "onAddToCart",
+        "type": "(product: Product, quantity: number, variant?: ProductVariant | undefined) => void | Promise<void>",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "ReviewCard",
+    "kind": "component",
+    "signature": "ReviewCard({ name, avatar, rating, date, children, verified, }: { name: string; avatar?: ReactNode; rating: number; date?: string | undefined; children: ReactNode; verified?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "avatar",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "rating",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "date",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "verified",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "ShippingMethodPicker",
+    "kind": "component",
+    "signature": "ShippingMethodPicker({ options, value, onValueChange, currency, }: { options: { id: string; label: string; description?: string | undefined; price: number; }[]; value: string; onValueChange: (v: string) => void; currency?: MoneyCurrency | undefined; }): Element",
+    "props": [
+      {
+        "name": "options",
+        "type": "{ id: string; label: string; description?: string | undefined; price: number; }[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(v: string) => void",
+        "required": true
+      },
+      {
+        "name": "currency",
+        "type": "MoneyCurrency | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "StockBadge",
+    "kind": "component",
+    "signature": "StockBadge({ stock, lowStock }: { stock: number; lowStock?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "stock",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "lowStock",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "useCart",
+    "kind": "function",
+    "signature": "useCart(): CartContextValue",
+    "props": []
+  },
+  {
+    "package": "commerce",
+    "name": "useCompare",
+    "kind": "function",
+    "signature": "useCompare(): CompareContextValue",
+    "props": []
+  },
+  {
+    "package": "commerce",
+    "name": "useWishlist",
+    "kind": "function",
+    "signature": "useWishlist(): WishlistContextValue",
+    "props": []
+  },
+  {
+    "package": "commerce",
+    "name": "WishlistProvider",
+    "kind": "component",
+    "signature": "WishlistProvider({ children, initialIds, onChange, }: { children: ReactNode; initialIds?: string[] | undefined; onChange?: ((ids: string[]) => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "initialIds",
+        "type": "string[] | undefined",
+        "required": false
+      },
+      {
+        "name": "onChange",
+        "type": "((ids: string[]) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "data",
+    "name": "BarChart",
+    "kind": "component",
+    "signature": "BarChart({ title, data }: { title: string; data: ChartDatum[]; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "data",
+        "type": "ChartDatum[]",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "data",
+    "name": "BarList",
+    "kind": "component",
+    "signature": "BarList({ title, data }: { title: string; data: ChartDatum[]; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "data",
+        "type": "ChartDatum[]",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "data",
+    "name": "DataTable",
+    "kind": "component",
+    "signature": "DataTable<T>({ rows, columns, getRowId, caption, description, state, defaultState, onStateChange, serverSide, rowCount, loading, selectable, selected, onSelectedChange, bulkActions, rowActions, renderExpanded, onRowClick, empty, toolbar, exportable, onExport, virtualized, height, rowHeight, className, }: DataTableProps<T>): Element",
+    "props": [
+      {
+        "name": "rows",
+        "type": "T[]",
+        "required": true
+      },
+      {
+        "name": "columns",
+        "type": "Column<T>[]",
+        "required": true
+      },
+      {
+        "name": "getRowId",
+        "type": "(row: T) => string",
+        "required": true
+      },
+      {
+        "name": "caption",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "state",
+        "type": "Partial<TableState> | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultState",
+        "type": "Partial<TableState> | undefined",
+        "required": false
+      },
+      {
+        "name": "onStateChange",
+        "type": "((s: TableState) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "serverSide",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "rowCount",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "loading",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "selectable",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "selected",
+        "type": "string[] | undefined",
+        "required": false
+      },
+      {
+        "name": "onSelectedChange",
+        "type": "((ids: string[]) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "bulkActions",
+        "type": "((ids: string[]) => ReactNode) | undefined",
+        "required": false
+      },
+      {
+        "name": "rowActions",
+        "type": "((row: T) => ReactNode) | undefined",
+        "required": false
+      },
+      {
+        "name": "renderExpanded",
+        "type": "((row: T) => ReactNode) | undefined",
+        "required": false
+      },
+      {
+        "name": "onRowClick",
+        "type": "((row: T) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "empty",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "toolbar",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "exportable",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onExport",
+        "type": "((rows: T[]) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "virtualized",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "height",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "rowHeight",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "data",
+    "name": "defaultTableState",
+    "kind": "constant",
+    "signature": "defaultTableState: TableState",
+    "props": []
+  },
+  {
+    "package": "data",
+    "name": "getTableRows",
+    "kind": "function",
+    "signature": "getTableRows<T>(rows: T[], columns: Column<T>[], state: TableState, locale?: string): T[]",
+    "props": []
+  },
+  {
+    "package": "data",
+    "name": "LineChart",
+    "kind": "component",
+    "signature": "LineChart({ title, data, area, }: { title: string; data: ChartDatum[]; area?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "data",
+        "type": "ChartDatum[]",
+        "required": true
+      },
+      {
+        "name": "area",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "data",
+    "name": "PieChart",
+    "kind": "component",
+    "signature": "PieChart({ title, data }: { title: string; data: ChartDatum[]; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "data",
+        "type": "ChartDatum[]",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "data",
+    "name": "ProportionBar",
+    "kind": "component",
+    "signature": "ProportionBar({ title, data }: { title: string; data: ChartDatum[]; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "data",
+        "type": "ChartDatum[]",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "data",
+    "name": "Sparkline",
+    "kind": "component",
+    "signature": "Sparkline({ values, label }: { values: number[]; label?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "values",
+        "type": "number[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "data",
+    "name": "toCSV",
+    "kind": "function",
+    "signature": "toCSV<T>(rows: T[], columns: Column<T>[]): string",
+    "props": []
+  },
+  {
+    "package": "forms",
+    "name": "Form",
+    "kind": "component",
+    "signature": "Form<T extends Record<string, unknown>>({ form, onSubmit, children, ...p }: Omit<FormHTMLAttributes<HTMLFormElement>, \"onSubmit\"> & { form: FormApi<T>; onSubmit: (values: T) => void | Promise<void>; }): Element",
+    "props": [
+      {
+        "name": "form",
+        "type": "FormApi<T>",
+        "required": true
+      },
+      {
+        "name": "onSubmit",
+        "type": "(values: T) => void | Promise<void>",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "forms",
+    "name": "FormField",
+    "kind": "component",
+    "signature": "FormField({ name, children, }: { name: string; children: (field: { name: string; value: unknown; onChange: (v: unknown) => void; onBlur: () => void; error?: string | undefined; }) => ReactNode; }): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "(field: { name: string; value: unknown; onChange: (v: unknown) => void; onBlur: () => void; error?: string | undefined; }) => ReactNode",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "forms",
+    "name": "FormWizard",
+    "kind": "component",
+    "signature": "FormWizard<T extends Record<string, unknown>>({ form, steps, onSubmit, }: { form: FormApi<T>; steps: { title: string; fields: string[]; content: ReactNode; }[]; onSubmit: (values: T) => void | Promise<void>; }): Element",
+    "props": [
+      {
+        "name": "form",
+        "type": "FormApi<T>",
+        "required": true
+      },
+      {
+        "name": "steps",
+        "type": "{ title: string; fields: string[]; content: ReactNode; }[]",
+        "required": true
+      },
+      {
+        "name": "onSubmit",
+        "type": "(values: T) => void | Promise<void>",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "forms",
+    "name": "getFieldValue",
+    "kind": "function",
+    "signature": "getFieldValue(object: unknown, path: string): unknown",
+    "props": []
+  },
+  {
+    "package": "forms",
+    "name": "SchemaForm",
+    "kind": "component",
+    "signature": "SchemaForm({ fields, defaultValues, onSubmit, submitLabel, }: { fields: SchemaField[]; defaultValues: Record<string, unknown>; onSubmit: (values: Record<string, unknown>) => void | Promise<void>; submitLabel?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "fields",
+        "type": "SchemaField[]",
+        "required": true
+      },
+      {
+        "name": "defaultValues",
+        "type": "Record<string, unknown>",
+        "required": true
+      },
+      {
+        "name": "onSubmit",
+        "type": "(values: Record<string, unknown>) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "submitLabel",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "forms",
+    "name": "setFieldValue",
+    "kind": "function",
+    "signature": "setFieldValue<T>(object: T, path: string, value: unknown): T",
+    "props": []
+  },
+  {
+    "package": "forms",
+    "name": "useFieldArray",
+    "kind": "function",
+    "signature": "useFieldArray<T extends Record<string, unknown>>({ form, name, }: { form: FormApi<T>; name: string; }): { fields: { id: string; value: unknown; index: number; }[]; append: (value: unknown) => void; remove: (index: number) => void; move: (from: number, to: number) => void; update: (index: number, value: unknown) => void; }",
+    "props": []
+  },
+  {
+    "package": "forms",
+    "name": "useForm",
+    "kind": "function",
+    "signature": "useForm<T extends Record<string, unknown>>({ defaultValues, validate: validator, }: { defaultValues: T; validate?: Validator<T> | undefined; }): FormApi<T>",
+    "props": []
+  },
+  {
+    "package": "forms",
+    "name": "useFormContext",
+    "kind": "function",
+    "signature": "useFormContext<T extends Record<string, unknown>>(): FormApi<T>",
+    "props": []
+  },
+  {
+    "package": "forms",
+    "name": "useFormDraft",
+    "kind": "function",
+    "signature": "useFormDraft<T extends Record<string, unknown>>({ form, storageKey, fields, }: { form: FormApi<T>; storageKey: string; fields: string[]; }): { clearDraft: () => void; ready: boolean; }",
+    "props": []
+  },
+  {
+    "package": "forms",
+    "name": "validateFields",
+    "kind": "function",
+    "signature": "validateFields<T extends Record<string, unknown>>(rules: Record<string, FieldValidator[]>): Validator<T>",
+    "props": []
+  },
+  {
+    "package": "forms",
+    "name": "validators",
+    "kind": "constant",
+    "signature": "validators: { required: (message?: string) => FieldValidator; minLength: (min: number, message?: string) => FieldValidator; maxLength: (max: number, message?: string) => FieldValidator; email: (message?: string) => FieldValidator; mobile: (message?: string) => FieldValidator; range: (min: number, max: number, message?: string) ...",
+    "props": []
+  },
+  {
+    "package": "icons",
+    "name": "Icon",
+    "kind": "component",
+    "signature": "Icon({ name, size, label, ...props }: IconProps): ReactSVGElement",
+    "props": [
+      {
+        "name": "name",
+        "type": "\"grid\" | \"search\" | \"plus\" | \"minus\" | \"close\" | \"check\" | \"chevronDown\" | \"chevronUp\" | \"chevronRight\" | \"chevronLeft\" | \"arrowLeft\" | \"arrowRight\" | \"cart\" | \"bag\" | \"heart\" | \"star\" | \"box\" | \"truck\" | \"shield\" | \"calendar\" | \"clock\" | \"user\" | \"users\" | \"bell\" | \"message\" | \"mail\" | \"settings\" | \"moon\" | \"sun\" | \"menu\" | \"more\" | \"filter\" | \"sort\" | \"download\" | \"upload\" | \"trash\" | \"edit\" | \"",
+        "required": true
+      },
+      {
+        "name": "size",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "icons",
+    "name": "iconPaths",
+    "kind": "constant",
+    "signature": "iconPaths: { readonly grid: \"M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z\"; readonly search: \"M21 21l-5-5 M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0\"; readonly plus: \"M12 5v14 M5 12h14\"; ... 48 more ...; readonly link: \"m10 14 4-4 M8 16l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0 M16 8l2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0\"; }",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "addDays",
+    "kind": "function",
+    "signature": "addDays(d: Date, n: number): Date",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "formatCardNumber",
+    "kind": "function",
+    "signature": "formatCardNumber(s: string): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "formatJalali",
+    "kind": "function",
+    "signature": "formatJalali(d: Date, style?: \"numeric\" | \"long\", digits?: \"fa\" | \"latin\"): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "formatMoney",
+    "kind": "function",
+    "signature": "formatMoney(n: number, currency?: MoneyCurrency, locale?: string): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "formatNumber",
+    "kind": "function",
+    "signature": "formatNumber(n: number, options?: NumberFormatOptions, locale?: string): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "formatRelativeTime",
+    "kind": "function",
+    "signature": "formatRelativeTime(date: Date, now?: Date, locale?: string): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "fromISODate",
+    "kind": "function",
+    "signature": "fromISODate(s: string): Date | null",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "isDateAllowed",
+    "kind": "function",
+    "signature": "isDateAllowed(d: Date, { min, max, isDateDisabled, }?: { min?: Date | undefined; max?: Date | undefined; isDateDisabled?: ((d: Date) => boolean) | undefined; }): boolean",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "isRangeAllowed",
+    "kind": "function",
+    "signature": "isRangeAllowed(start: Date, end: Date, rules?: { min?: Date | undefined; max?: Date | undefined; isDateDisabled?: ((d: Date) => boolean) | undefined; } | undefined): boolean",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "isValidCardNumber",
+    "kind": "function",
+    "signature": "isValidCardNumber(s: string): boolean",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "isValidIban",
+    "kind": "function",
+    "signature": "isValidIban(s: string): boolean",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "isValidMobile",
+    "kind": "function",
+    "signature": "isValidMobile(s: string): boolean",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "isValidNationalId",
+    "kind": "function",
+    "signature": "isValidNationalId(s: string): boolean",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "isValidPostalCode",
+    "kind": "function",
+    "signature": "isValidPostalCode(s: string): boolean",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "JALALI_MONTHS",
+    "kind": "constant",
+    "signature": "JALALI_MONTHS: readonly [\"فروردین\", \"اردیبهشت\", \"خرداد\", \"تیر\", \"مرداد\", \"شهریور\", \"مهر\", \"آبان\", \"آذر\", \"دی\", \"بهمن\", \"اسفند\"]",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "jalaliMonthLength",
+    "kind": "function",
+    "signature": "jalaliMonthLength(year: number, month: number): number",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "normalizeMobile",
+    "kind": "function",
+    "signature": "normalizeMobile(s: string): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "normalizePersian",
+    "kind": "function",
+    "signature": "normalizePersian(s: string): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "numberToWords",
+    "kind": "function",
+    "signature": "numberToWords(n: number): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "parseJalali",
+    "kind": "function",
+    "signature": "parseJalali(text: string): Date | null",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "PROVINCES",
+    "kind": "constant",
+    "signature": "PROVINCES: readonly [\"آذربایجان شرقی\", \"آذربایجان غربی\", \"اردبیل\", \"اصفهان\", \"البرز\", \"ایلام\", \"بوشهر\", \"تهران\", \"چهارمحال و بختیاری\", \"خراسان جنوبی\", \"خراسان رضوی\", \"خراسان شمالی\", ... 18 more ..., \"یزد\"]",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "sameDay",
+    "kind": "function",
+    "signature": "sameDay(a: Date | null | undefined, b: Date | null | undefined): boolean",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "searchText",
+    "kind": "function",
+    "signature": "searchText(s: string): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "startOfDay",
+    "kind": "function",
+    "signature": "startOfDay(d: Date): Date",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "toEnDigits",
+    "kind": "function",
+    "signature": "toEnDigits(value: unknown): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "toFaDigits",
+    "kind": "function",
+    "signature": "toFaDigits(value: unknown): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "toGregorian",
+    "kind": "function",
+    "signature": "toGregorian(year: number, month: number, day: number): Date | null",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "toISODate",
+    "kind": "function",
+    "signature": "toISODate(d: Date): string",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "toJalali",
+    "kind": "function",
+    "signature": "toJalali(d: Date): JalaliDate",
+    "props": []
+  },
+  {
+    "package": "persian",
+    "name": "WEEKDAYS",
+    "kind": "constant",
+    "signature": "WEEKDAYS: readonly [\"شنبه\", \"یکشنبه\", \"دوشنبه\", \"سه‌شنبه\", \"چهارشنبه\", \"پنجشنبه\", \"جمعه\"]",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "acceptsFile",
+    "kind": "function",
+    "signature": "acceptsFile(file: File, accept?: string | undefined): boolean",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "Accordion",
+    "kind": "component",
+    "signature": "Accordion({ items, multiple, }: { items: { id: string; title: ReactNode; content: ReactNode; }[]; multiple?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "{ id: string; title: ReactNode; content: ReactNode; }[]",
+        "required": true
+      },
+      {
+        "name": "multiple",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Alert",
+    "kind": "component",
+    "signature": "Alert({ tone, title, children, onClose, className, ...p }: Omit<HTMLAttributes<HTMLDivElement>, \"title\"> & { tone?: Tone | undefined; title?: ReactNode; onClose?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "tone",
+        "type": "Tone | undefined",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "onClose",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Avatar",
+    "kind": "component",
+    "signature": "Avatar({ name, src, size, className, }: { name: string; src?: string | undefined; size?: \"sm\" | \"md\" | \"lg\" | undefined; className?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "src",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\" | \"lg\" | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "AvatarGroup",
+    "kind": "component",
+    "signature": "AvatarGroup({ names, max, }: { names: { name: string; src?: string | undefined; }[]; max?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "names",
+        "type": "{ name: string; src?: string | undefined; }[]",
+        "required": true
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Badge",
+    "kind": "component",
+    "signature": "Badge({ tone, dot, className, children, ...p }: HTMLAttributes<HTMLSpanElement> & { tone?: Tone | undefined; dot?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "tone",
+        "type": "Tone | undefined",
+        "required": false
+      },
+      {
+        "name": "dot",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Breadcrumb",
+    "kind": "component",
+    "signature": "Breadcrumb({ items, label, }: { items: { label: string; href?: string | undefined; }[]; label?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "{ label: string; href?: string | undefined; }[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Button",
+    "kind": "component",
+    "signature": "Button(props: ButtonProps & RefAttributes<HTMLButtonElement>): ReactNode",
+    "props": [
+      {
+        "name": "variant",
+        "type": "\"solid\" | \"soft\" | \"outline\" | \"ghost\" | \"danger\" | undefined",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\" | \"lg\" | undefined",
+        "required": false
+      },
+      {
+        "name": "loading",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "startIcon",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endIcon",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "ButtonGroup",
+    "kind": "component",
+    "signature": "ButtonGroup({ className, ...p }: HTMLAttributes<HTMLDivElement>): Element",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "Calendar",
+    "kind": "component",
+    "signature": "Calendar({ value, onValueChange, defaultMonth, min, max, isDateDisabled, range, autoFocus, footer, }: CalendarProps): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "Date | null | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((d: Date) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultMonth",
+        "type": "Date | undefined",
+        "required": false
+      },
+      {
+        "name": "range",
+        "type": "{ start: Date | null; end: Date | null; } | undefined",
+        "required": false
+      },
+      {
+        "name": "autoFocus",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "min",
+        "type": "Date | undefined",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "Date | undefined",
+        "required": false
+      },
+      {
+        "name": "isDateDisabled",
+        "type": "((date: Date) => boolean) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Card",
+    "kind": "component",
+    "signature": "Card({ className, ...p }: HTMLAttributes<HTMLDivElement>): Element",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "CardBody",
+    "kind": "component",
+    "signature": "CardBody({ className, ...p }: HTMLAttributes<HTMLDivElement>): Element",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "CardFooter",
+    "kind": "component",
+    "signature": "CardFooter({ className, ...p }: HTMLAttributes<HTMLDivElement>): Element",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "CardHeader",
+    "kind": "component",
+    "signature": "CardHeader({ className, ...p }: HTMLAttributes<HTMLDivElement>): Element",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "CardNumberInput",
+    "kind": "component",
+    "signature": "CardNumberInput(p: Omit<PersianInputProps, \"kind\">): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((value: string, valid: boolean) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Carousel",
+    "kind": "component",
+    "signature": "Carousel({ items, label }: { items: ReactNode[]; label: string; }): Element | null",
+    "props": [
+      {
+        "name": "items",
+        "type": "ReactNode[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Checkbox",
+    "kind": "component",
+    "signature": "Checkbox(props: CheckProps & RefAttributes<HTMLInputElement>): ReactNode",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "indeterminate",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "ChipGroup",
+    "kind": "component",
+    "signature": "ChipGroup({ label, options, value, onValueChange, multiple, }: { label: string; options: Option[]; value: string[]; onValueChange: (v: string[]) => void; multiple?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "options",
+        "type": "Option[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string[]",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(v: string[]) => void",
+        "required": true
+      },
+      {
+        "name": "multiple",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "ColorPicker",
+    "kind": "component",
+    "signature": "ColorPicker({ value, onValueChange, label, }: { value: string; onValueChange: (color: string) => void; label: string; }): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(color: string) => void",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Combobox",
+    "kind": "component",
+    "signature": "Combobox({ label, options, value, defaultValue, onValueChange, placeholder, disabled, loading, error, name, onSearchChange, filter, clearable, required, }: ComboboxProps): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "options",
+        "type": "readonly Option[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((v: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "loading",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "name",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onSearchChange",
+        "type": "((query: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "filter",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "clearable",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "required",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "CommandPalette",
+    "kind": "component",
+    "signature": "CommandPalette({ open, onOpenChange, items, title, }: { open: boolean; onOpenChange: (v: boolean) => void; items: CommandItem[]; title?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(v: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "items",
+        "type": "CommandItem[]",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "ConfirmDialog",
+    "kind": "component",
+    "signature": "ConfirmDialog({ open, onOpenChange, title, description, onConfirm, danger, loading, }: { open: boolean; onOpenChange: (v: boolean) => void; title: string; description?: string | undefined; onConfirm: () => void | Promise<void>; danger?: boolean | undefined; loading?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(v: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onConfirm",
+        "type": "() => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "danger",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "loading",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Container",
+    "kind": "component",
+    "signature": "Container({ className, ...p }: HTMLAttributes<HTMLDivElement>): Element",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "CopyButton",
+    "kind": "component",
+    "signature": "CopyButton({ value, label, onError, }: { value: string; label?: string | undefined; onError?: ((e: unknown) => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onError",
+        "type": "((e: unknown) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Countdown",
+    "kind": "component",
+    "signature": "Countdown({ until, label, onComplete, }: { until: Date; label: string; onComplete?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "until",
+        "type": "Date",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onComplete",
+        "type": "(() => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "createChunkedUploader",
+    "kind": "function",
+    "signature": "createChunkedUploader(transport: ChunkTransport, { chunkSize, retries }?: { chunkSize?: number | undefined; retries?: number | undefined; }): Uploader",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "cx",
+    "kind": "function",
+    "signature": "cx(...classes: (string | false | null | undefined)[]): string",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "DatePicker",
+    "kind": "component",
+    "signature": "DatePicker({ value, defaultValue, onValueChange, min, max, isDateDisabled, label, name, disabled, readOnly, error, onBlur, ...p }: DatePickerProps): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "Date | null | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "Date | null | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((v: Date | null) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "min",
+        "type": "Date | undefined",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "Date | undefined",
+        "required": false
+      },
+      {
+        "name": "isDateDisabled",
+        "type": "((date: Date) => boolean) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "DateRangePicker",
+    "kind": "component",
+    "signature": "DateRangePicker({ label, value, onValueChange, min, max, isDateDisabled, presets, disabled, name, }: { label: string; value: DateRange; onValueChange: (v: DateRange) => void; presets?: DateRangePreset[] | undefined; disabled?: boolean | undefined; name?: string | undefined; } & DateRules): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "DateRange",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(v: DateRange) => void",
+        "required": true
+      },
+      {
+        "name": "presets",
+        "type": "DateRangePreset[] | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "name",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "min",
+        "type": "Date | undefined",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "Date | undefined",
+        "required": false
+      },
+      {
+        "name": "isDateDisabled",
+        "type": "((date: Date) => boolean) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "defaultRangePresets",
+    "kind": "constant",
+    "signature": "defaultRangePresets: DateRangePreset[]",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "Dialog",
+    "kind": "component",
+    "signature": "Dialog({ open, onOpenChange, title, description, children, footer, size, placement, dismissible, className, }: DialogProps): Element",
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(open: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\" | \"lg\" | \"full\" | undefined",
+        "required": false
+      },
+      {
+        "name": "placement",
+        "type": "\"center\" | \"end\" | \"start\" | \"bottom\" | undefined",
+        "required": false
+      },
+      {
+        "name": "dismissible",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Divider",
+    "kind": "component",
+    "signature": "Divider({ label }: { label?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Drawer",
+    "kind": "component",
+    "signature": "Drawer(p: DialogProps): Element",
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(open: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\" | \"lg\" | \"full\" | undefined",
+        "required": false
+      },
+      {
+        "name": "placement",
+        "type": "\"center\" | \"end\" | \"start\" | \"bottom\" | undefined",
+        "required": false
+      },
+      {
+        "name": "dismissible",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "DropdownMenu",
+    "kind": "component",
+    "signature": "DropdownMenu({ trigger, label, items, }: { trigger: ReactNode; label: string; items: MenuAction[]; }): Element",
+    "props": [
+      {
+        "name": "trigger",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "items",
+        "type": "MenuAction[]",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "EmptyState",
+    "kind": "component",
+    "signature": "EmptyState({ title, description, icon, action, }: { title: ReactNode; description?: ReactNode; icon?: \"grid\" | \"search\" | \"plus\" | \"minus\" | \"close\" | \"check\" | \"chevronDown\" | \"chevronUp\" | \"chevronRight\" | \"chevronLeft\" | \"arrowLeft\" | \"arrowRight\" | \"cart\" | \"bag\" | \"heart\" | \"star\" | \"box\" | \"truck\" | \"shield\" | \"calendar\" | \"clock\" | \"user\" | \"users\" | \"bell\" | \"message\" | \"mail\" | \"settings\" | \"moon\" | \"sun\" | \"menu\" | \"more\" | \"filter\" | \"sort\" | \"download\" | \"upload\" | \"trash\" | \"edit\" | \"copy\" | \"eye\" | \"lock\" | \"info\" | \"warning\" | \"chart\" | \"code\" | \"layers\" | \"sparkles\" | \"creditCard\" | \"tag\" | \"compare\" | \"refresh\" | \"globe\" | \"link\" | undefined; action?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "\"grid\" | \"search\" | \"plus\" | \"minus\" | \"close\" | \"check\" | \"chevronDown\" | \"chevronUp\" | \"chevronRight\" | \"chevronLeft\" | \"arrowLeft\" | \"arrowRight\" | \"cart\" | \"bag\" | \"heart\" | \"star\" | \"box\" | \"truck\" | \"shield\" | \"calendar\" | \"clock\" | \"user\" | \"users\" | \"bell\" | \"message\" | \"mail\" | \"settings\" | \"moon\" | \"sun\" | \"menu\" | \"more\" | \"filter\" | \"sort\" | \"download\" | \"upload\" | \"trash\" | \"edit\" | \"",
+        "required": false
+      },
+      {
+        "name": "action",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Field",
+    "kind": "component",
+    "signature": "Field({ label, description, error, htmlFor, required, optional, className, children, ...p }: FieldProps): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "htmlFor",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "required",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "optional",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "FileUpload",
+    "kind": "component",
+    "signature": "FileUpload({ label, uploader, accept, multiple, maxSize, maxFiles, concurrency, disabled, onItemsChange, }: { label: string; uploader?: Uploader | undefined; accept?: string | undefined; multiple?: boolean | undefined; maxSize?: number | undefined; maxFiles?: number | undefined; concurrency?: number | undefined; disabled?: boolean | undefined; onItemsChange?: ((items: UploadItem[]) => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "uploader",
+        "type": "Uploader | undefined",
+        "required": false
+      },
+      {
+        "name": "accept",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "multiple",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "maxSize",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "maxFiles",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "concurrency",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onItemsChange",
+        "type": "((items: UploadItem[]) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "formatBytes",
+    "kind": "function",
+    "signature": "formatBytes(bytes: number, locale?: string): string",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "Grid",
+    "kind": "component",
+    "signature": "Grid({ min, gap, className, style, ...p }: HTMLAttributes<HTMLDivElement> & { min?: number | undefined; gap?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "min",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "gap",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "IbanInput",
+    "kind": "component",
+    "signature": "IbanInput(p: Omit<PersianInputProps, \"kind\">): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((value: string, valid: boolean) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "IconButton",
+    "kind": "component",
+    "signature": "IconButton(props: IconButtonProps & RefAttributes<HTMLButtonElement>): ReactNode",
+    "props": [
+      {
+        "name": "icon",
+        "type": "\"grid\" | \"search\" | \"plus\" | \"minus\" | \"close\" | \"check\" | \"chevronDown\" | \"chevronUp\" | \"chevronRight\" | \"chevronLeft\" | \"arrowLeft\" | \"arrowRight\" | \"cart\" | \"bag\" | \"heart\" | \"star\" | \"box\" | \"truck\" | \"shield\" | \"calendar\" | \"clock\" | \"user\" | \"users\" | \"bell\" | \"message\" | \"mail\" | \"settings\" | \"moon\" | \"sun\" | \"menu\" | \"more\" | \"filter\" | \"sort\" | \"download\" | \"upload\" | \"trash\" | \"edit\" | \"",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\" | \"lg\" | undefined",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "\"solid\" | \"soft\" | \"outline\" | \"ghost\" | \"danger\" | undefined",
+        "required": false
+      },
+      {
+        "name": "loading",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "startIcon",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endIcon",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "InlineEdit",
+    "kind": "component",
+    "signature": "InlineEdit({ value, onSave, label, }: { value: string; onSave: (v: string) => void | Promise<void>; label: string; }): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onSave",
+        "type": "(v: string) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Input",
+    "kind": "component",
+    "signature": "Input(props: InputProps & RefAttributes<HTMLInputElement>): ReactNode",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Kbd",
+    "kind": "component",
+    "signature": "Kbd({ children }: { children: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Meter",
+    "kind": "component",
+    "signature": "Meter({ value, max, label, className, }: { value?: number | undefined; max?: number | undefined; label: string; className?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "MobileInput",
+    "kind": "component",
+    "signature": "MobileInput(p: Omit<PersianInputProps, \"kind\">): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((value: string, valid: boolean) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "MonthPicker",
+    "kind": "component",
+    "signature": "MonthPicker({ label, value, onValueChange, minYear, maxYear, }: { label: string; value: { year: number; month: number; }; onValueChange: (v: { year: number; month: number; }) => void; minYear?: number | undefined; maxYear?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "{ year: number; month: number; }",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(v: { year: number; month: number; }) => void",
+        "required": true
+      },
+      {
+        "name": "minYear",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "maxYear",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "MultiSelect",
+    "kind": "component",
+    "signature": "MultiSelect({ label, options, value, onValueChange, max, disabled, name, }: { label: string; options: readonly Option[]; value: string[]; onValueChange: (v: string[]) => void; max?: number | undefined; disabled?: boolean | undefined; name?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "options",
+        "type": "readonly Option[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string[]",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(v: string[]) => void",
+        "required": true
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "name",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "NationalIdInput",
+    "kind": "component",
+    "signature": "NationalIdInput(p: Omit<PersianInputProps, \"kind\">): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((value: string, valid: boolean) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "NumberInput",
+    "kind": "component",
+    "signature": "NumberInput({ label, value, onValueChange, min, max, step, name, disabled, }: { label: string; value: number; onValueChange: (n: number) => void; min?: number | undefined; max?: number | undefined; step?: number | undefined; name?: string | undefined; disabled?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(n: number) => void",
+        "required": true
+      },
+      {
+        "name": "min",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "step",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "name",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "OtpInput",
+    "kind": "component",
+    "signature": "OtpInput({ label, value, onValueChange, length, name, disabled, autoFocus, onComplete, }: { label: string; value: string; onValueChange: (v: string) => void; length?: number | undefined; name?: string | undefined; disabled?: boolean | undefined; autoFocus?: boolean | undefined; onComplete?: ((v: string) => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(v: string) => void",
+        "required": true
+      },
+      {
+        "name": "length",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "name",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "autoFocus",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onComplete",
+        "type": "((v: string) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "pageRange",
+    "kind": "function",
+    "signature": "pageRange(page: number, pages: number): (number | \"ellipsis\")[]",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "Pagination",
+    "kind": "component",
+    "signature": "Pagination({ page, total, pageSize, onPageChange, label, }: { page: number; total: number; pageSize?: number | undefined; onPageChange: (page: number) => void; label?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "page",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "total",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "pageSize",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "onPageChange",
+        "type": "(page: number) => void",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "PasswordInput",
+    "kind": "component",
+    "signature": "PasswordInput({ label, ...p }: InputProps): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "PasswordStrength",
+    "kind": "component",
+    "signature": "PasswordStrength({ value }: { value: string; }): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "PersianInput",
+    "kind": "component",
+    "signature": "PersianInput({ kind, value, defaultValue, onValueChange, name, disabled, error, onBlur, ...p }: PersianInputProps): Element",
+    "props": [
+      {
+        "name": "kind",
+        "type": "PersianInputKind",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((value: string, valid: boolean) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Popover",
+    "kind": "component",
+    "signature": "Popover({ trigger, children, label, open: controlled, onOpenChange, align, className, }: PopoverProps): Element",
+    "props": [
+      {
+        "name": "trigger",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "open",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onOpenChange",
+        "type": "((v: boolean) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "align",
+        "type": "\"end\" | \"start\" | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "PostalCodeInput",
+    "kind": "component",
+    "signature": "PostalCodeInput(p: Omit<PersianInputProps, \"kind\">): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((value: string, valid: boolean) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "PriceInput",
+    "kind": "component",
+    "signature": "PriceInput({ value, onValueChange, label, name, disabled, ...p }: Omit<InputProps, \"onChange\" | \"value\" | \"defaultValue\"> & { value: number; onValueChange: (v: number) => void; label: string; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode & string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(v: number) => void",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "PrimeProvider",
+    "kind": "component",
+    "signature": "PrimeProvider({ children, locale, dir, digits, theme: controlled, defaultTheme, onThemeChange, brand, radius, fontFamily, density, storageKey, className, }: PrimeProviderProps): Element",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "type": "Locale | undefined",
+        "required": false
+      },
+      {
+        "name": "dir",
+        "type": "\"rtl\" | \"ltr\" | undefined",
+        "required": false
+      },
+      {
+        "name": "digits",
+        "type": "\"fa\" | \"latin\" | undefined",
+        "required": false
+      },
+      {
+        "name": "theme",
+        "type": "ThemeMode | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultTheme",
+        "type": "ThemeMode | undefined",
+        "required": false
+      },
+      {
+        "name": "onThemeChange",
+        "type": "((v: ThemeMode) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "brand",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "radius",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "fontFamily",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "density",
+        "type": "Density | undefined",
+        "required": false
+      },
+      {
+        "name": "storageKey",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Progress",
+    "kind": "component",
+    "signature": "Progress({ value, max, label, className, }: { value?: number | undefined; max?: number | undefined; label: string; className?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "ProvinceSelect",
+    "kind": "component",
+    "signature": "ProvinceSelect(p: Omit<SelectProps & RefAttributes<HTMLSelectElement>, \"options\">): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "RadioGroup",
+    "kind": "component",
+    "signature": "RadioGroup({ label, name, options, value, onChange, disabled, }: { label: string; name: string; options: { label: string; value: string; description?: string | undefined; }[]; value: string; onChange: (v: string) => void; disabled?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "options",
+        "type": "{ label: string; value: string; description?: string | undefined; }[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onChange",
+        "type": "(v: string) => void",
+        "required": true
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Rating",
+    "kind": "component",
+    "signature": "Rating({ value, max, onValueChange, label, readonly, }: { value: number; max?: number | undefined; onValueChange?: ((v: number) => void) | undefined; label: string; readonly?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "value",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((v: number) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "readonly",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "RelativeTime",
+    "kind": "component",
+    "signature": "RelativeTime({ date, refresh }: { date: Date; refresh?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "date",
+        "type": "Date",
+        "required": true
+      },
+      {
+        "name": "refresh",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "SegmentedControl",
+    "kind": "component",
+    "signature": "SegmentedControl({ label, options, value, onChange, }: { label: string; options: { label: string; value: string; }[]; value: string; onChange: (s: string) => void; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "options",
+        "type": "{ label: string; value: string; }[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onChange",
+        "type": "(s: string) => void",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Select",
+    "kind": "component",
+    "signature": "Select(props: SelectProps & RefAttributes<HTMLSelectElement>): ReactNode",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "options",
+        "type": "readonly { label: string; value: string; disabled?: boolean | undefined; }[] | undefined",
+        "required": false
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "SideNav",
+    "kind": "component",
+    "signature": "SideNav({ items, active, onSelect, label, collapsed, }: { items: SideNavItem[]; active?: string | undefined; onSelect?: ((id: string) => void) | undefined; label: string; collapsed?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "SideNavItem[]",
+        "required": true
+      },
+      {
+        "name": "active",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onSelect",
+        "type": "((id: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "collapsed",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Skeleton",
+    "kind": "component",
+    "signature": "Skeleton({ className, style, ...p }: HTMLAttributes<HTMLSpanElement>): Element",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "Slider",
+    "kind": "component",
+    "signature": "Slider({ label, value, onValueChange, min, max, step, disabled, name, }: { label: string; value: number; onValueChange: (v: number) => void; min?: number | undefined; max?: number | undefined; step?: number | undefined; disabled?: boolean | undefined; name?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(v: number) => void",
+        "required": true
+      },
+      {
+        "name": "min",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "step",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "name",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Spinner",
+    "kind": "component",
+    "signature": "Spinner({ label }: { label?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Stack",
+    "kind": "component",
+    "signature": "Stack({ gap, direction, className, style, ...p }: HTMLAttributes<HTMLDivElement> & { gap?: number | undefined; direction?: \"row\" | \"column\" | undefined; }): Element",
+    "props": [
+      {
+        "name": "gap",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "direction",
+        "type": "\"row\" | \"column\" | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "StatCard",
+    "kind": "component",
+    "signature": "StatCard({ label, value, change, description, icon, sparkline, }: { label: string; value: ReactNode; change?: number | undefined; description?: string | undefined; icon?: ReactNode; sparkline?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "change",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "sparkline",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Stepper",
+    "kind": "component",
+    "signature": "Stepper({ steps, current, }: { steps: { label: string; description?: string | undefined; }[]; current: number; }): Element",
+    "props": [
+      {
+        "name": "steps",
+        "type": "{ label: string; description?: string | undefined; }[]",
+        "required": true
+      },
+      {
+        "name": "current",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Switch",
+    "kind": "component",
+    "signature": "Switch(props: Omit<CheckProps, \"indeterminate\"> & RefAttributes<HTMLInputElement>): ReactNode",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Tabs",
+    "kind": "component",
+    "signature": "Tabs({ items, value, defaultValue, onValueChange, label, variant, }: { items: TabItem[]; value?: string | undefined; defaultValue?: string | undefined; onValueChange?: ((v: string) => void) | undefined; label: string; variant?: \"underline\" | \"pills\" | undefined; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "TabItem[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((v: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "variant",
+        "type": "\"underline\" | \"pills\" | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "TagInput",
+    "kind": "component",
+    "signature": "TagInput({ label, value, onValueChange, placeholder, max, disabled, }: { label: string; value: string[]; onValueChange: (v: string[]) => void; placeholder?: string | undefined; max?: number | undefined; disabled?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string[]",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(v: string[]) => void",
+        "required": true
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Textarea",
+    "kind": "component",
+    "signature": "Textarea(props: TextareaProps & RefAttributes<HTMLTextAreaElement>): ReactNode",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "TimeInput",
+    "kind": "component",
+    "signature": "TimeInput({ value, onValueChange, ...p }: Omit<InputProps, \"type\" | \"onChange\" | \"value\"> & { value: string; onValueChange: (s: string) => void; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(s: string) => void",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Timeline",
+    "kind": "component",
+    "signature": "Timeline({ items, }: { items: { id: string; title: ReactNode; description?: ReactNode; date?: ReactNode; icon?: ReactNode; }[]; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "{ id: string; title: ReactNode; description?: ReactNode; date?: ReactNode; icon?: ReactNode; }[]",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "ToastProvider",
+    "kind": "component",
+    "signature": "ToastProvider({ children, max }: { children: ReactNode; max?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "max",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Tooltip",
+    "kind": "component",
+    "signature": "Tooltip({ label, children }: { label: string; children: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "TreeView",
+    "kind": "component",
+    "signature": "TreeView({ items, label, onSelect, }: { items: TreeItem[]; label: string; onSelect?: ((id: string) => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "TreeItem[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "((id: string) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "useLabels",
+    "kind": "function",
+    "signature": "useLabels<T>(fa: T, en: T): T",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "usePrime",
+    "kind": "function",
+    "signature": "usePrime(): DesignContext",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "useTheme",
+    "kind": "function",
+    "signature": "useTheme(): DesignContext",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "useToast",
+    "kind": "function",
+    "signature": "useToast(): { toast: (o: ToastOptions) => number; dismiss: (id: number) => void; }",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "VisuallyHidden",
+    "kind": "component",
+    "signature": "VisuallyHidden({ children }: { children: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "tokens",
+    "name": "brandScale",
+    "kind": "function",
+    "signature": "brandScale(brand: string): Record<number, string>",
+    "props": []
+  },
+  {
+    "package": "tokens",
+    "name": "breakpoints",
+    "kind": "constant",
+    "signature": "breakpoints: { readonly sm: 640; readonly md: 768; readonly lg: 1024; readonly xl: 1280; }",
+    "props": []
+  },
+  {
+    "package": "tokens",
+    "name": "contrastRatio",
+    "kind": "function",
+    "signature": "contrastRatio(a: string, b: string): number",
+    "props": []
+  },
+  {
+    "package": "tokens",
+    "name": "createTheme",
+    "kind": "function",
+    "signature": "createTheme({ brand, radius, fontFamily, density, selector, }?: ThemeOptions): string",
+    "props": []
+  },
+  {
+    "package": "tokens",
+    "name": "hexToRgb",
+    "kind": "function",
+    "signature": "hexToRgb(hex: string): [number, number, number]",
+    "props": []
+  },
+  {
+    "package": "tokens",
+    "name": "semanticTokens",
+    "kind": "constant",
+    "signature": "semanticTokens: { readonly light: { readonly bg: \"#f7f8fc\"; readonly surface: \"#ffffff\"; readonly elevated: \"#ffffff\"; readonly muted: \"#f0f2f7\"; readonly text: \"#17233b\"; readonly secondary: \"#52617a\"; readonly border: \"#dce2ed\"; ... 8 more ...; readonly infoBg: \"#eaf2ff\"; }; readonly dark: { ...; }; }",
+    "props": []
+  },
+  {
+    "package": "tokens",
+    "name": "spacing",
+    "kind": "constant",
+    "signature": "spacing: { readonly 0: \"0\"; readonly 1: \".25rem\"; readonly 2: \".5rem\"; readonly 3: \".75rem\"; readonly 4: \"1rem\"; readonly 5: \"1.25rem\"; readonly 6: \"1.5rem\"; readonly 8: \"2rem\"; readonly 10: \"2.5rem\"; readonly 12: \"3rem\"; readonly 16: \"4rem\"; }",
+    "props": []
+  },
+  {
+    "package": "tokens",
+    "name": "tokensCSS",
+    "kind": "function",
+    "signature": "tokensCSS(): string",
+    "props": []
+  }
+]

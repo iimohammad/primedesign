@@ -1,0 +1,152 @@
+/* Resets stay inside PrimeProvider so the system can be adopted incrementally. */
+.pd-root {
+  font-family: var(--pd-font);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--pd-text);
+  background: var(--pd-bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --pd-brand-soft: color-mix(in srgb, var(--pd-brand) 9%, var(--pd-surface));
+  --pd-brand-text: var(--pd-brand-700);
+}
+.pd-root[data-pd-theme='dark'] {
+  --pd-brand-soft: color-mix(in srgb, var(--pd-brand) 18%, var(--pd-surface));
+  --pd-brand-text: var(--pd-brand-300);
+}
+.pd-root *,
+.pd-root *::before,
+.pd-root *::after {
+  box-sizing: border-box;
+}
+.pd-root :where(button, input, select, textarea) {
+  font: inherit;
+  color: inherit;
+}
+.pd-root :where(button, a, input, select, textarea, summary) {
+  -webkit-tap-highlight-color: transparent;
+}
+.pd-root :where(button) {
+  cursor: pointer;
+}
+.pd-root :where(button:disabled, [aria-disabled='true']) {
+  cursor: not-allowed;
+}
+.pd-root :where(button:disabled) {
+  opacity: 0.5;
+}
+.pd-root :where(a) {
+  color: inherit;
+  text-decoration: none;
+}
+.pd-root :where(h1, h2, h3, h4, p, figure) {
+  margin: 0;
+}
+.pd-root :where(h1, h2, h3, h4) {
+  font-weight: 750;
+  line-height: 1.45;
+}
+.pd-root :where(h1) {
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+}
+.pd-root :where(h2) {
+  font-size: 1.4rem;
+}
+.pd-root :where(h3) {
+  font-size: 1rem;
+}
+.pd-root :where(small) {
+  font-size: 12px;
+  color: var(--pd-secondary);
+}
+.pd-root :where(img, svg) {
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.pd-root :where(img) {
+  max-width: 100%;
+}
+.pd-root :where(:focus-visible) {
+  outline: 2px solid var(--pd-brand);
+  outline-offset: 3px;
+}
+.pd-root ::selection {
+  background: var(--pd-brand-soft);
+}
+.pd-root :where(ul, ol) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pd-root :where(fieldset) {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-inline-size: 0;
+}
+.pd-root :where([hidden]) {
+  display: none !important;
+}
+.pd-sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0 !important;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0 !important;
+}
+.pd-container {
+  width: min(100% - 3rem, 1280px);
+  margin-inline: auto;
+}
+.pd-full {
+  width: 100%;
+}
+.pd-grid > * {
+  min-width: 0;
+}
+.pd-stack > * {
+  min-width: 0;
+}
+.pd-text-danger {
+  color: var(--pd-danger) !important;
+}
+.pd-text-success {
+  color: var(--pd-success) !important;
+}
+.pd-text-warning {
+  color: var(--pd-warning) !important;
+}
+.pd-root code,
+.pd-root kbd {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pd-root *,
+  .pd-root *::before,
+  .pd-root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (forced-colors: active) {
+  .pd-button,
+  .pd-card,
+  .pd-input-wrap,
+  .pd-badge,
+  .pd-dialog,
+  .pd-product-card {
+    border: 1px solid ButtonText;
+  }
+  .pd-skeleton {
+    background: GrayText;
+  }
+  .pd-switch-track {
+    border: 1px solid ButtonText;
+  }
+}

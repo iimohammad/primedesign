@@ -1,0 +1,29 @@
+{
+  "name": "@primedesign/cli",
+  "version": "0.1.0",
+  "description": "PrimeDesign project initializer and component facade generator",
+  "type": "module",
+  "bin": {
+    "primedesign": "bin/primedesign.mjs"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@primedesign/tokens": "0.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iimohammad/primedesign.git",
+    "directory": "packages/cli"
+  }
+}

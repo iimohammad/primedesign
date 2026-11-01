@@ -1,0 +1,48 @@
+{
+  "name": "primedesign-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PrimeDesign \u2014 a Persian-first product design system",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @primedesign/tokens && npm run build -w @primedesign/persian && npm run build -w @primedesign/icons && npm run build -w @primedesign/css && npm run build -w @primedesign/react && npm run build -w @primedesign/forms && npm run build -w @primedesign/data && npm run build -w @primedesign/commerce && npm run build -w @primedesign/blocks && npm run api:build && npm run build -w @primedesign/docs",
+    "dev": "npm run dev -w @primedesign/docs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "check:packages": "node scripts/check-packages.mjs",
+    "check": "npm run build && npm run typecheck && npm test && npm run check:packages",
+    "api:build": "node scripts/api.mjs",
+    "pack": "npm run build && node scripts/pack.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "exports:build": "node scripts/exports.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.51.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.9.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.8.2",
+    "vazirmatn": "^33.0.3",
+    "vite": "^6.2.2",
+    "vitest": "^3.0.8"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
