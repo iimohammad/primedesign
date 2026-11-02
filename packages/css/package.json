@@ -1,6 +1,6 @@
 {
   "name": "@primedesign/css",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "PrimeDesign standalone CSS and semantic design tokens",
   "type": "module",
   "main": "./dist/primedesign.css",
@@ -13,7 +13,9 @@
     "./commerce.css": "./dist/commerce.css",
     "./nofont.css": "./dist/nofont.css",
     "./font.css": "./dist/font.css",
-    "./fonts/*": "./dist/fonts/*"
+    "./fonts/*": "./dist/fonts/*",
+    "./advanced.css": "./dist/advanced.css",
+    "./ai.css": "./dist/ai.css"
   },
   "files": [
     "dist",
@@ -27,7 +29,7 @@
     "build": "node build.mjs"
   },
   "dependencies": {
-    "@primedesign/tokens": "0.1.0"
+    "@primedesign/tokens": "0.2.0"
   },
   "license": "MIT",
   "repository": {

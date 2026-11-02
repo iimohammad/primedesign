@@ -1,5 +1,5 @@
 import { formatMoney } from '@primedesign/persian';
-import { Button } from '@primedesign/react';
+import { Button } from '../src/components/ui/button';
 import { Store } from './store';
 export default function Page() {
   return (

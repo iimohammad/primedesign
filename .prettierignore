@@ -6,3 +6,9 @@ test-results/
 package-lock.json
 apps/docs/public/products/
 apps/docs/src/api.json
+apps/docs/public/r/
+apps/docs/public/standalone/
+packages/cli/registry/
+apps/docs/src/registry.json
+downloads/
+packages/elements/src/contracts.ts

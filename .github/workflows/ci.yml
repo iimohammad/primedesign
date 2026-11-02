@@ -56,6 +56,7 @@ jobs:
       - run: npm ci
       - run: npm run pack
       - run: npm install --prefix examples/next-app --ignore-scripts
+      - run: node examples/next-app/node_modules/@primedesign/cli/bin/primedesign.mjs add button product-card --source --cwd examples/next-app
       - run: npm run build --prefix examples/next-app
         env:
           NEXT_TELEMETRY_DISABLED: '1'

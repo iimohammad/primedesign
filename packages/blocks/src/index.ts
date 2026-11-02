@@ -13,3 +13,5 @@ export {
   DashboardNav,
 } from './blocks.js';
 export type { Ticket, Message } from './blocks.js';
+export { KanbanBoard, TeamMembers, NotificationPreferences, SettingsPanel } from './workflows.js';
+export type { KanbanItem, KanbanColumn, TeamMember, PreferenceItem } from './workflows.js';

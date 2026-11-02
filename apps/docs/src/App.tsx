@@ -19,10 +19,16 @@ import {
   ThemeStudio,
 } from './Demos.js';
 import { Section } from './Section.js';
+import { AdvancedDemo, AIDemo, UniversalDemo, RegistryDemo, CoverageDemo } from './Extensions.js';
 const nav = [
   { id: 'overview', label: 'شروع یک تجربهٔ بهتر', icon: 'grid' },
   { id: 'components', label: 'کامپوننت‌ها', icon: 'layers' },
   { id: 'commerce', label: 'فروشگاه و محصول', icon: 'bag', badge: 'جدید' },
+  { id: 'advanced', label: 'محیط کار و اجزای پیشرفته', icon: 'box' },
+  { id: 'ai', label: 'چت و رابط‌های AI', icon: 'sparkles' },
+  { id: 'universal', label: 'HTML و وردپرس', icon: 'globe' },
+  { id: 'registry', label: 'رجیستری سورس', icon: 'code' },
+  { id: 'coverage', label: 'مقایسهٔ پوشش', icon: 'check' },
   { id: 'data', label: 'جدول و نمودار', icon: 'chart' },
   { id: 'forms', label: 'فرم‌های هوشمند', icon: 'edit' },
   { id: 'persian', label: 'ابزارهای فارسی', icon: 'globe' },
@@ -132,7 +138,7 @@ function Workspace({
       <div className="docs-sidebar-bottom">
         <span className="docs-version">
           <i />
-          نسخهٔ ۰.۱.۰ <P.Badge>MIT</P.Badge>
+          نسخهٔ ۰.۲.۰ <P.Badge>MIT</P.Badge>
         </span>
         <a href="https://github.com/iimohammad/primedesign" target="_blank" rel="noreferrer">
           <Icon name="code" size={16} />
@@ -165,7 +171,7 @@ function Workspace({
             />
             <span className="docs-top-title">دیزاین‌سیستم فارسی برای محصولات واقعی</span>
             <span className="docs-top-dot" />
-            <small>React & Next.js</small>
+            <small>React · HTML · WordPress</small>
           </div>
           <div>
             <P.IconButton
@@ -215,6 +221,16 @@ function Workspace({
             <Commerce />
           ) : page === 'components' ? (
             <Components />
+          ) : page === 'advanced' ? (
+            <AdvancedDemo />
+          ) : page === 'ai' ? (
+            <AIDemo />
+          ) : page === 'universal' ? (
+            <UniversalDemo />
+          ) : page === 'registry' ? (
+            <RegistryDemo />
+          ) : page === 'coverage' ? (
+            <CoverageDemo />
           ) : page === 'data' ? (
             <DataDemo />
           ) : page === 'forms' ? (
@@ -404,7 +420,7 @@ function Overview({ onNavigate }: { onNavigate: (p: Page) => void }) {
             value: api.filter((a) => a.kind === 'component').length + '+',
             label: 'کامپوننت و بخش آماده',
           },
-          { value: '۱۰', label: 'پکیج مستقل' },
+          { value: '۱۲', label: 'پکیج مستقل' },
           { value: '۵', label: 'چیدمان کارت محصول' },
           { value: 'RTL / LTR', label: 'یک تجربه، دو جهت' },
         ].map((m) => (

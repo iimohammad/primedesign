@@ -1,5 +1,670 @@
 [
   {
+    "package": "ai",
+    "name": "AIMessage",
+    "kind": "component",
+    "signature": "AIMessage({ message, streaming, onFeedback, }: { message: ChatMessage; streaming?: boolean | undefined; onFeedback?: ((positive: boolean) => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "message",
+        "type": "ChatMessage",
+        "required": true
+      },
+      {
+        "name": "streaming",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onFeedback",
+        "type": "((positive: boolean) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "ChainOfThought",
+    "kind": "component",
+    "signature": "ChainOfThought({ steps, label }: { steps: TraceEntry[]; label: string; }): Element",
+    "props": [
+      {
+        "name": "steps",
+        "type": "TraceEntry[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "Chat",
+    "kind": "component",
+    "signature": "Chat({ messages, title, description, error, suggestions, onSuggestion, height, onRegenerate, ...prompt }: ChatProps): Element",
+    "props": [
+      {
+        "name": "messages",
+        "type": "ChatMessage[]",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "suggestions",
+        "type": "string[] | undefined",
+        "required": false
+      },
+      {
+        "name": "onSuggestion",
+        "type": "((text: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "height",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "onRegenerate",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onSubmit",
+        "type": "(input: PromptSubmission) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "onStop",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "\"error\" | \"ready\" | \"submitted\" | \"streaming\" | undefined",
+        "required": false
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "models",
+        "type": "ModelOption[] | undefined",
+        "required": false
+      },
+      {
+        "name": "model",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onModelChange",
+        "type": "((id: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "allowAttachments",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "maxFiles",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "maxFileSize",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "Checkpoint",
+    "kind": "component",
+    "signature": "Checkpoint({ title, description, onRestore, disabled, }: { title: string; description?: string | undefined; onRestore: () => void | Promise<void>; disabled?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onRestore",
+        "type": "() => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "Confirmation",
+    "kind": "component",
+    "signature": "Confirmation({ title, description, onApprove, onReject, status, loading, }: { title: string; description?: string | undefined; onApprove: () => void | Promise<void>; onReject: () => void | Promise<void>; status?: \"pending\" | \"approved\" | \"rejected\" | undefined; loading?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onApprove",
+        "type": "() => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "onReject",
+        "type": "() => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "\"pending\" | \"approved\" | \"rejected\" | undefined",
+        "required": false
+      },
+      {
+        "name": "loading",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "ContextUsage",
+    "kind": "component",
+    "signature": "ContextUsage({ used, limit, label, details, }: { used: number; limit: number; label?: string | undefined; details?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "used",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "details",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "FileTree",
+    "kind": "component",
+    "signature": "FileTree({ items, label, onSelect, selected, }: { items: FileTreeNode[]; label: string; onSelect?: ((id: string) => void) | undefined; selected?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "FileTreeNode[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "((id: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "selected",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "InlineCitation",
+    "kind": "component",
+    "signature": "InlineCitation({ source, index }: { source: Source; index: number; }): Element",
+    "props": [
+      {
+        "name": "source",
+        "type": "Source",
+        "required": true
+      },
+      {
+        "name": "index",
+        "type": "number",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "ModelSelector",
+    "kind": "component",
+    "signature": "ModelSelector({ models, value, onValueChange, label, disabled, }: { models: ModelOption[]; value: string; onValueChange: (id: string) => void; label?: string | undefined; disabled?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "models",
+        "type": "ModelOption[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(id: string) => void",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "Plan",
+    "kind": "component",
+    "signature": "Plan({ title, items }: { title: string; items: PlanItem[]; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "items",
+        "type": "PlanItem[]",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "PromptInput",
+    "kind": "component",
+    "signature": "PromptInput({ onSubmit, onStop, status, placeholder, models, model, onModelChange, allowAttachments, maxFiles, maxFileSize, disabled, }: PromptInputProps): Element",
+    "props": [
+      {
+        "name": "onSubmit",
+        "type": "(input: PromptSubmission) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "onStop",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "\"error\" | \"ready\" | \"submitted\" | \"streaming\" | undefined",
+        "required": false
+      },
+      {
+        "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "models",
+        "type": "ModelOption[] | undefined",
+        "required": false
+      },
+      {
+        "name": "model",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onModelChange",
+        "type": "((id: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "allowAttachments",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "maxFiles",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "maxFileSize",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "Queue",
+    "kind": "component",
+    "signature": "Queue({ items, onCancel, onRetry, label, }: { items: QueueItem[]; onCancel?: ((id: string) => void) | undefined; onRetry?: ((id: string) => void) | undefined; label: string; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "QueueItem[]",
+        "required": true
+      },
+      {
+        "name": "onCancel",
+        "type": "((id: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onRetry",
+        "type": "((id: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "Reasoning",
+    "kind": "component",
+    "signature": "Reasoning({ summary, children, open, defaultOpen, onOpenChange, }: { summary: string; children: ReactNode; open?: boolean | undefined; defaultOpen?: boolean | undefined; onOpenChange?: ((v: boolean) => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "summary",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "open",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultOpen",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onOpenChange",
+        "type": "((v: boolean) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "Sources",
+    "kind": "component",
+    "signature": "Sources({ sources, label }: { sources: Source[]; label?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "sources",
+        "type": "Source[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "StackTrace",
+    "kind": "component",
+    "signature": "StackTrace({ message, stack }: { message: string; stack: string; }): Element",
+    "props": [
+      {
+        "name": "message",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "stack",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "streamCompletion",
+    "kind": "function",
+    "signature": "streamCompletion({ url, body, signal, onDelta, headers, credentials, protocol, extractDelta, maxEventBytes, }: StreamOptions): Promise<void>",
+    "props": []
+  },
+  {
+    "package": "ai",
+    "name": "SubagentCard",
+    "kind": "component",
+    "signature": "SubagentCard({ name, description, status, children, }: { name: string; description?: string | undefined; status: RunStatus; children?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "RunStatus",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "Suggestions",
+    "kind": "component",
+    "signature": "Suggestions({ items, onSelect, label, }: { items: string[]; onSelect: (text: string) => void; label?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "string[]",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(text: string) => void",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "TaskCard",
+    "kind": "component",
+    "signature": "TaskCard({ title, status, description, progress, actions, }: { title: string; status: RunStatus; description?: string | undefined; progress?: number | undefined; actions?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "RunStatus",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "progress",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "actions",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "Terminal",
+    "kind": "component",
+    "signature": "Terminal({ output, title, running, }: { output: string; title?: string | undefined; running?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "output",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "running",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "TestResults",
+    "kind": "component",
+    "signature": "TestResults({ items, label, }: { items: { id: string; name: string; status: \"passed\" | \"failed\" | \"skipped\"; duration?: number | undefined; error?: string | undefined; }[]; label: string; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "{ id: string; name: string; status: \"passed\" | \"failed\" | \"skipped\"; duration?: number | undefined; error?: string | undefined; }[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "ai",
+    "name": "ToolCall",
+    "kind": "component",
+    "signature": "ToolCall({ name, status, input, output, error, duration }: ToolCallProps): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "type": "RunStatus",
+        "required": true
+      },
+      {
+        "name": "input",
+        "type": "unknown",
+        "required": false
+      },
+      {
+        "name": "output",
+        "type": "unknown",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "duration",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
     "package": "blocks",
     "name": "AppShell",
     "kind": "component",
@@ -189,6 +854,29 @@
   },
   {
     "package": "blocks",
+    "name": "KanbanBoard",
+    "kind": "component",
+    "signature": "KanbanBoard({ columns, onMove, label, }: { columns: KanbanColumn[]; onMove: (itemId: string, from: string, to: string) => void | Promise<void>; label: string; }): Element",
+    "props": [
+      {
+        "name": "columns",
+        "type": "KanbanColumn[]",
+        "required": true
+      },
+      {
+        "name": "onMove",
+        "type": "(itemId: string, from: string, to: string) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "blocks",
     "name": "NotificationCenter",
     "kind": "component",
     "signature": "NotificationCenter({ items, onRead, onReadAll, }: { items: { id: string; title: string; description?: string | undefined; date: string; read?: boolean | undefined; }[]; onRead: (id: string) => void; onReadAll?: (() => void) | undefined; }): Element",
@@ -207,6 +895,29 @@
         "name": "onReadAll",
         "type": "(() => void) | undefined",
         "required": false
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "NotificationPreferences",
+    "kind": "component",
+    "signature": "NotificationPreferences({ items, onValueChange, label, }: { items: PreferenceItem[]; onValueChange: (id: string, enabled: boolean) => void; label: string; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "PreferenceItem[]",
+        "required": true
+      },
+      {
+        "name": "onValueChange",
+        "type": "(id: string, enabled: boolean) => void",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
       }
     ]
   },
@@ -288,6 +999,67 @@
         "name": "action",
         "type": "ReactNode",
         "required": true
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "SettingsPanel",
+    "kind": "component",
+    "signature": "SettingsPanel({ title, description, initialValues, onSave, children, }: { title: string; description?: string | undefined; initialValues: { name: string; description: string; }; onSave: (values: { name: string; description: string; }) => void | Promise<void>; children?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "initialValues",
+        "type": "{ name: string; description: string; }",
+        "required": true
+      },
+      {
+        "name": "onSave",
+        "type": "(values: { name: string; description: string; }) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "blocks",
+    "name": "TeamMembers",
+    "kind": "component",
+    "signature": "TeamMembers({ members, roles, onRoleChange, onInvite, }: { members: TeamMember[]; roles: { label: string; value: string; }[]; onRoleChange?: ((id: string, role: string) => void) | undefined; onInvite?: (() => void) | undefined; }): Element",
+    "props": [
+      {
+        "name": "members",
+        "type": "TeamMember[]",
+        "required": true
+      },
+      {
+        "name": "roles",
+        "type": "{ label: string; value: string; }[]",
+        "required": true
+      },
+      {
+        "name": "onRoleChange",
+        "type": "((id: string, role: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onInvite",
+        "type": "(() => void) | undefined",
+        "required": false
       }
     ]
   },
@@ -410,6 +1182,34 @@
         "name": "href",
         "type": "string | undefined",
         "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "BundleCard",
+    "kind": "component",
+    "signature": "BundleCard({ title, products, price, onAddBundle, }: { title: string; products: Product[]; price: number; onAddBundle: (products: Product[]) => void | Promise<void>; }): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "products",
+        "type": "Product[]",
+        "required": true
+      },
+      {
+        "name": "price",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "onAddBundle",
+        "type": "(products: Product[]) => void | Promise<void>",
+        "required": true
       }
     ]
   },
@@ -644,6 +1444,34 @@
       {
         "name": "onRemove",
         "type": "((id: string) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "CouponCard",
+    "kind": "component",
+    "signature": "CouponCard({ code, title, description, expires, }: { code: string; title: string; description?: string | undefined; expires?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "code",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "expires",
+        "type": "string | undefined",
         "required": false
       }
     ]
@@ -901,6 +1729,34 @@
   },
   {
     "package": "commerce",
+    "name": "ProductDetail",
+    "kind": "component",
+    "signature": "ProductDetail({ product, onAddToCart, description, shippingInfo, }: { product: Product; onAddToCart: (product: Product, quantity: number, variant?: ProductVariant | undefined) => void | Promise<void>; description?: ReactNode; shippingInfo?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "product",
+        "type": "Product",
+        "required": true
+      },
+      {
+        "name": "onAddToCart",
+        "type": "(product: Product, quantity: number, variant?: ProductVariant | undefined) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "shippingInfo",
+        "type": "ReactNode",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
     "name": "ProductGallery",
     "kind": "component",
     "signature": "ProductGallery({ images, title, }: { images: { src: string; alt: string; }[]; title: string; }): Element",
@@ -929,13 +1785,13 @@
         "required": false
       },
       {
-        "name": "layout",
-        "type": "ProductCardLayout | undefined",
+        "name": "onAddToCart",
+        "type": "((product: Product, quantity: number, variant?: ProductVariant | undefined) => void | Promise<void>) | undefined",
         "required": false
       },
       {
-        "name": "onAddToCart",
-        "type": "((product: Product, quantity: number, variant?: ProductVariant | undefined) => void | Promise<void>) | undefined",
+        "name": "layout",
+        "type": "ProductCardLayout | undefined",
         "required": false
       },
       {
@@ -1103,6 +1959,44 @@
       {
         "name": "verified",
         "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "commerce",
+    "name": "SellerCard",
+    "kind": "component",
+    "signature": "SellerCard({ name, logo, rating, description, verified, action, }: { name: string; logo?: string | undefined; rating?: number | undefined; description?: string | undefined; verified?: boolean | undefined; action?: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "logo",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "rating",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "verified",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "action",
+        "type": "ReactNode",
         "required": false
       }
     ]
@@ -1902,6 +2796,67 @@
   },
   {
     "package": "react",
+    "name": "AspectRatio",
+    "kind": "component",
+    "signature": "AspectRatio({ ratio, className, style, ...props }: HTMLAttributes<HTMLDivElement> & { ratio?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "ratio",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Attachment",
+    "kind": "component",
+    "signature": "Attachment({ name, size, url, type, onRemove, onDownload, progress, error, }: AttachmentProps): Element",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "size",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "url",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "type",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onRemove",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "onDownload",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "progress",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
     "name": "Avatar",
     "kind": "component",
     "signature": "Avatar({ name, src, size, className, }: { name: string; src?: string | undefined; size?: \"sm\" | \"md\" | \"lg\" | undefined; className?: string | undefined; }): Element",
@@ -2242,6 +3197,87 @@
   },
   {
     "package": "react",
+    "name": "CodeBlock",
+    "kind": "component",
+    "signature": "CodeBlock({ code, language, filename, showLineNumbers, maxHeight, className, }: CodeBlockProps): Element",
+    "props": [
+      {
+        "name": "code",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "language",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "filename",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "showLineNumbers",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "maxHeight",
+        "type": "number | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Collapsible",
+    "kind": "component",
+    "signature": "Collapsible({ title, children, open, defaultOpen, onOpenChange, disabled, className, }: CollapsibleProps): Element",
+    "props": [
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "open",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultOpen",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onOpenChange",
+        "type": "((v: boolean) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
     "name": "ColorPicker",
     "kind": "component",
     "signature": "ColorPicker({ value, onValueChange, label, }: { value: string; onValueChange: (color: string) => void; label: string; }): Element",
@@ -2418,6 +3454,34 @@
     "kind": "component",
     "signature": "Container({ className, ...p }: HTMLAttributes<HTMLDivElement>): Element",
     "props": []
+  },
+  {
+    "package": "react",
+    "name": "ContextMenu",
+    "kind": "component",
+    "signature": "ContextMenu({ label, children, items, className }: ContextMenuProps): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "items",
+        "type": "MenuAction[]",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
   },
   {
     "package": "react",
@@ -2667,6 +3731,24 @@
   },
   {
     "package": "react",
+    "name": "DirectionProvider",
+    "kind": "component",
+    "signature": "DirectionProvider({ dir, children }: { dir: \"rtl\" | \"ltr\"; children: ReactNode; }): Element",
+    "props": [
+      {
+        "name": "dir",
+        "type": "\"rtl\" | \"ltr\"",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
     "name": "Divider",
     "kind": "component",
     "signature": "Divider({ label }: { label?: string | undefined; }): Element",
@@ -2905,6 +3987,34 @@
   },
   {
     "package": "react",
+    "name": "HoverCard",
+    "kind": "component",
+    "signature": "HoverCard({ trigger, title, children, delay, }: { trigger: ReactNode; title: string; children: ReactNode; delay?: number | undefined; }): Element",
+    "props": [
+      {
+        "name": "trigger",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "delay",
+        "type": "number | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
     "name": "IbanInput",
     "kind": "component",
     "signature": "IbanInput(p: Omit<PersianInputProps, \"kind\">): Element",
@@ -3067,6 +4177,125 @@
   },
   {
     "package": "react",
+    "name": "InputGroup",
+    "kind": "component",
+    "signature": "InputGroup(props: HTMLAttributes<HTMLDivElement> & RefAttributes<HTMLDivElement>): ReactNode",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "InputGroupAddon",
+    "kind": "component",
+    "signature": "InputGroupAddon({ position, className, ...props }: HTMLAttributes<HTMLDivElement> & { position?: \"end\" | \"start\" | undefined; }): Element",
+    "props": [
+      {
+        "name": "position",
+        "type": "\"end\" | \"start\" | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "InputGroupInput",
+    "kind": "component",
+    "signature": "InputGroupInput(props: InputProps & RefAttributes<HTMLInputElement>): ReactNode",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "startAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endAdornment",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "wrapperClassName",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Item",
+    "kind": "component",
+    "signature": "Item({ leading, title, description, trailing, children, onClick, href, className, }: { leading?: ReactNode; title: ReactNode; description?: ReactNode; trailing?: ReactNode; children?: ReactNode; onClick?: (() => void) | undefined; href?: string | undefined; className?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "leading",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "trailing",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "onClick",
+        "type": "(() => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "href",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "ItemGroup",
+    "kind": "component",
+    "signature": "ItemGroup({ label, children, className, ...props }: HTMLAttributes<HTMLDivElement> & { label: string; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
     "name": "Kbd",
     "kind": "component",
     "signature": "Kbd({ children }: { children: ReactNode; }): Element",
@@ -3075,6 +4304,115 @@
         "name": "children",
         "type": "ReactNode",
         "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Label",
+    "kind": "component",
+    "signature": "Label(props: LabelHTMLAttributes<HTMLLabelElement> & RefAttributes<HTMLLabelElement>): ReactNode",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "Marker",
+    "kind": "component",
+    "signature": "Marker({ children, tone, className, ...props }: HTMLAttributes<HTMLElement> & { tone?: \"warning\" | \"danger\" | \"brand\" | \"success\" | undefined; }): Element",
+    "props": [
+      {
+        "name": "tone",
+        "type": "\"warning\" | \"danger\" | \"brand\" | \"success\" | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Menubar",
+    "kind": "component",
+    "signature": "Menubar({ menus, label }: { menus: MenubarMenu[]; label: string; }): Element",
+    "props": [
+      {
+        "name": "menus",
+        "type": "MenubarMenu[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "MessageBubble",
+    "kind": "component",
+    "signature": "MessageBubble({ children, sender, avatar, role, time, status, actions, streaming, className, }: MessageBubbleProps): Element",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "sender",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "avatar",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "role",
+        "type": "\"user\" | \"assistant\" | \"system\" | undefined",
+        "required": false
+      },
+      {
+        "name": "time",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "status",
+        "type": "\"error\" | \"pending\" | \"sent\" | \"read\" | undefined",
+        "required": false
+      },
+      {
+        "name": "actions",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "streaming",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "MessageScroller",
+    "kind": "component",
+    "signature": "MessageScroller({ children, label, height, className, ...props }: HTMLAttributes<HTMLDivElement> & { label: string; height?: string | number | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "height",
+        "type": "string | number | undefined",
+        "required": false
       }
     ]
   },
@@ -3287,6 +4625,36 @@
         "required": false
       }
     ]
+  },
+  {
+    "package": "react",
+    "name": "NavigationMenu",
+    "kind": "component",
+    "signature": "NavigationMenu({ items, label, active, }: { items: NavigationItem[]; label: string; active?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "NavigationItem[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "active",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "normalizePanelSizes",
+    "kind": "function",
+    "signature": "normalizePanelSizes(panels: ResizablePanelSpec[], candidate?: number[] | undefined): number[]",
+    "props": []
   },
   {
     "package": "react",
@@ -3808,6 +5176,34 @@
   },
   {
     "package": "react",
+    "name": "Questionnaire",
+    "kind": "component",
+    "signature": "Questionnaire({ questions, onComplete, defaultAnswers, label, }: QuestionnaireProps): Element | null",
+    "props": [
+      {
+        "name": "questions",
+        "type": "Question[]",
+        "required": true
+      },
+      {
+        "name": "onComplete",
+        "type": "(answers: Record<string, unknown>) => void | Promise<void>",
+        "required": true
+      },
+      {
+        "name": "defaultAnswers",
+        "type": "Record<string, unknown> | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
     "name": "RadioGroup",
     "kind": "component",
     "signature": "RadioGroup({ label, name, options, value, onChange, disabled, }: { label: string; name: string; options: { label: string; value: string; description?: string | undefined; }[]; value: string; onChange: (v: string) => void; disabled?: boolean | undefined; }): Element",
@@ -3897,6 +5293,79 @@
   },
   {
     "package": "react",
+    "name": "ResizablePanelGroup",
+    "kind": "component",
+    "signature": "ResizablePanelGroup({ panels, orientation, onLayoutChange, storageKey, className, label, style, }: ResizablePanelGroupProps): Element",
+    "props": [
+      {
+        "name": "panels",
+        "type": "ResizablePanelSpec[]",
+        "required": true
+      },
+      {
+        "name": "orientation",
+        "type": "\"horizontal\" | \"vertical\" | undefined",
+        "required": false
+      },
+      {
+        "name": "onLayoutChange",
+        "type": "((sizes: number[]) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "storageKey",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "style",
+        "type": "CSSProperties | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "resizePanelPair",
+    "kind": "function",
+    "signature": "resizePanelPair(sizes: number[], panels: ResizablePanelSpec[], index: number, next: number): number[]",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "ScrollArea",
+    "kind": "component",
+    "signature": "ScrollArea({ label, height, orientation, className, style, ...props }: HTMLAttributes<HTMLDivElement> & { label: string; height?: string | number | undefined; orientation?: \"both\" | \"horizontal\" | \"vertical\" | undefined; }): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "height",
+        "type": "string | number | undefined",
+        "required": false
+      },
+      {
+        "name": "orientation",
+        "type": "\"both\" | \"horizontal\" | \"vertical\" | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
     "name": "SegmentedControl",
     "kind": "component",
     "signature": "SegmentedControl({ label, options, value, onChange, }: { label: string; options: { label: string; value: string; }[]; value: string; onChange: (s: string) => void; }): Element",
@@ -3951,6 +5420,110 @@
       },
       {
         "name": "placeholder",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Separator",
+    "kind": "component",
+    "signature": "Separator({ orientation, decorative, className, ...props }: HTMLAttributes<HTMLDivElement> & { orientation?: \"horizontal\" | \"vertical\" | undefined; decorative?: boolean | undefined; }): Element",
+    "props": [
+      {
+        "name": "orientation",
+        "type": "\"horizontal\" | \"vertical\" | undefined",
+        "required": false
+      },
+      {
+        "name": "decorative",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Sidebar",
+    "kind": "component",
+    "signature": "Sidebar({ label, items, active, onSelect, brand, footer, collapsed, defaultCollapsed, onCollapsedChange, mobileOpen, onMobileOpenChange, className, }: SidebarProps): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "items",
+        "type": "SideNavItem[]",
+        "required": true
+      },
+      {
+        "name": "active",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "onSelect",
+        "type": "((id: string) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "brand",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "collapsed",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultCollapsed",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onCollapsedChange",
+        "type": "((v: boolean) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "mobileOpen",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onMobileOpenChange",
+        "type": "((v: boolean) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "SidebarTrigger",
+    "kind": "component",
+    "signature": "SidebarTrigger({ onClick, label }: { onClick: () => void; label?: string | undefined; }): Element",
+    "props": [
+      {
+        "name": "onClick",
+        "type": "() => void",
+        "required": true
+      },
+      {
+        "name": "label",
         "type": "string | undefined",
         "required": false
       }
@@ -4059,6 +5632,49 @@
   },
   {
     "package": "react",
+    "name": "Splitter",
+    "kind": "component",
+    "signature": "Splitter(props: ResizablePanelGroupProps): Element",
+    "props": [
+      {
+        "name": "panels",
+        "type": "ResizablePanelSpec[]",
+        "required": true
+      },
+      {
+        "name": "orientation",
+        "type": "\"horizontal\" | \"vertical\" | undefined",
+        "required": false
+      },
+      {
+        "name": "onLayoutChange",
+        "type": "((sizes: number[]) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "storageKey",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string | undefined",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "style",
+        "type": "CSSProperties | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
     "name": "Stack",
     "kind": "component",
     "signature": "Stack({ gap, direction, className, style, ...p }: HTMLAttributes<HTMLDivElement> & { gap?: number | undefined; direction?: \"row\" | \"column\" | undefined; }): Element",
@@ -4153,6 +5769,55 @@
         "required": false
       }
     ]
+  },
+  {
+    "package": "react",
+    "name": "Table",
+    "kind": "component",
+    "signature": "Table({ className, ...props }: HTMLAttributes<HTMLTableElement>): Element",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "TableBody",
+    "kind": "component",
+    "signature": "TableBody(props: HTMLAttributes<HTMLTableSectionElement> & RefAttributes<HTMLTableSectionElement>): ReactNode",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "TableCaption",
+    "kind": "component",
+    "signature": "TableCaption(props: HTMLAttributes<HTMLTableCaptionElement> & RefAttributes<HTMLTableCaptionElement>): ReactNode",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "TableCell",
+    "kind": "component",
+    "signature": "TableCell(props: HTMLAttributes<HTMLTableCellElement> & RefAttributes<HTMLTableCellElement>): ReactNode",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "TableHead",
+    "kind": "component",
+    "signature": "TableHead(props: HTMLAttributes<HTMLTableCellElement> & RefAttributes<HTMLTableCellElement>): ReactNode",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "TableHeader",
+    "kind": "component",
+    "signature": "TableHeader(props: HTMLAttributes<HTMLTableSectionElement> & RefAttributes<HTMLTableSectionElement>): ReactNode",
+    "props": []
+  },
+  {
+    "package": "react",
+    "name": "TableRow",
+    "kind": "component",
+    "signature": "TableRow(props: HTMLAttributes<HTMLTableRowElement> & RefAttributes<HTMLTableRowElement>): ReactNode",
+    "props": []
   },
   {
     "package": "react",
@@ -4334,6 +5999,102 @@
   },
   {
     "package": "react",
+    "name": "Toggle",
+    "kind": "component",
+    "signature": "Toggle({ pressed, defaultPressed, onPressedChange, onClick, children, ...props }: ToggleProps): Element",
+    "props": [
+      {
+        "name": "pressed",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultPressed",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "onPressedChange",
+        "type": "((v: boolean) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\" | \"lg\" | undefined",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "\"solid\" | \"soft\" | \"outline\" | \"ghost\" | \"danger\" | undefined",
+        "required": false
+      },
+      {
+        "name": "loading",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "startIcon",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "endIcon",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "ToggleGroup",
+    "kind": "component",
+    "signature": "ToggleGroup({ label, items, value, defaultValue, onValueChange, multiple, disabled, }: ToggleGroupProps): Element",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "items",
+        "type": "{ value: string; label: ReactNode; disabled?: boolean | undefined; }[]",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string[] | undefined",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string[] | undefined",
+        "required": false
+      },
+      {
+        "name": "onValueChange",
+        "type": "((v: string[]) => void) | undefined",
+        "required": false
+      },
+      {
+        "name": "multiple",
+        "type": "boolean | undefined",
+        "required": false
+      },
+      {
+        "name": "disabled",
+        "type": "boolean | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
     "name": "Tooltip",
     "kind": "component",
     "signature": "Tooltip({ label, children }: { label: string; children: ReactNode; }): Element",
@@ -4346,6 +6107,24 @@
       {
         "name": "children",
         "type": "ReactNode",
+        "required": true
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Trace",
+    "kind": "component",
+    "signature": "Trace({ items, label }: { items: TraceEntry[]; label: string; }): Element",
+    "props": [
+      {
+        "name": "items",
+        "type": "TraceEntry[]",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
         "required": true
       }
     ]
@@ -4369,6 +6148,24 @@
       {
         "name": "onSelect",
         "type": "((id: string) => void) | undefined",
+        "required": false
+      }
+    ]
+  },
+  {
+    "package": "react",
+    "name": "Typography",
+    "kind": "component",
+    "signature": "Typography({ variant, as, className, ...props }: TypographyProps): DOMElement<{ defaultChecked?: boolean | undefined; defaultValue?: string | number | readonly string[] | undefined; suppressContentEditableWarning?: boolean | undefined; suppressHydrationWarning?: boolean | undefined; accessKey?: string | undefined; autoCapitalize?: \"none\" | (string & {}) | \"off\" | \"on\" | \"sentences\" | \"words\" | \"characters\" | undefined; autoFocus?: boolean | undefined; contentEditable?: Booleanish | \"inherit\" | \"plaintext-only\" | undefined; contextMenu?: string | undefined; dir?: string | undefined; draggable?: Booleanish | undefined; enterKeyHint?: \"search\" | \"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"send\" | undefined; hidden?: boolean | undefined; id?: string | undefined; lang?: string | undefined; nonce?: string | undefined; slot?: string | undefined; spellCheck?: Booleanish | undefined; style?: CSSProperties | undefined; tabIndex?: number | undefined; title?: string | undefined; translate?: \"no\" | \"yes\" | undefined; radioGroup?: string | undefined; role?: AriaRole | undefined; about?: string | undefined; content?: string | undefined; datatype?: string | undefined; inlist?: any; prefix?: string | undefined; property?: string | undefined; rel?: string | undefined; resource?: string | undefined; rev?: string | undefined; typeof?: string | undefined; vocab?: string | undefined; autoCorrect?: string | undefined; autoSave?: string | undefined; color?: string | undefined; itemProp?: string | undefined; itemScope?: boolean | undefined; itemType?: string | undefined; itemID?: string | undefined; itemRef?: string | undefined; results?: number | undefined; security?: string | undefined; unselectable?: \"off\" | \"on\" | undefined; popover?: \"\" | \"auto\" | \"manual\" | \"hint\" | undefined; popoverTargetAction?: \"toggle\" | \"show\" | \"hide\" | undefined; popoverTarget?: string | undefined; inert?: boolean | undefined; inputMode?: \"numeric\" | \"search\" | \"none\" | \"text\" | \"tel\" | \"url\" | \"email\" | \"decimal\" | undefined; is?: string | undefined; exportparts?: string | undefined; part?: string | undefined; \"aria-activedescendant\"?: string | undefined; \"aria-atomic\"?: Booleanish | undefined; \"aria-autocomplete\"?: \"none\" | \"list\" | \"inline\" | \"both\" | undefined; \"aria-braillelabel\"?: string | undefined; \"aria-brailleroledescription\"?: string | undefined; \"aria-busy\"?: Booleanish | undefined; \"aria-checked\"?: boolean | \"true\" | \"false\" | \"mixed\" | undefined; \"aria-colcount\"?: number | undefined; \"aria-colindex\"?: number | undefined; \"aria-colindextext\"?: string | undefined; \"aria-colspan\"?: number | undefined; \"aria-controls\"?: string | undefined; \"aria-current\"?: boolean | \"time\" | \"true\" | \"false\" | \"page\" | \"step\" | \"location\" | \"date\" | undefined; \"aria-describedby\"?: string | undefined; \"aria-description\"?: string | undefined; \"aria-details\"?: string | undefined; \"aria-disabled\"?: Booleanish | undefined; \"aria-dropeffect\"?: \"copy\" | \"link\" | \"none\" | \"execute\" | \"move\" | \"popup\" | undefined; \"aria-errormessage\"?: string | undefined; \"aria-expanded\"?: Booleanish | undefined; \"aria-flowto\"?: string | undefined; \"aria-grabbed\"?: Booleanish | undefined; \"aria-haspopup\"?: boolean | \"grid\" | \"menu\" | \"dialog\" | \"listbox\" | \"tree\" | \"true\" | \"false\" | undefined; \"aria-hidden\"?: Booleanish | undefined; \"aria-invalid\"?: boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\" | undefined; \"aria-keyshortcuts\"?: string | undefined; \"aria-label\"?: string | undefined; \"aria-labelledby\"?: string | undefined; \"aria-level\"?: number | undefined; \"aria-live\"?: \"off\" | \"assertive\" | \"polite\" | undefined; \"aria-modal\"?: Booleanish | undefined; \"aria-multiline\"?: Booleanish | undefined; \"aria-multiselectable\"?: Booleanish | undefined; \"aria-orientation\"?: \"horizontal\" | \"vertical\" | undefined; \"aria-owns\"?: string | undefined; \"aria-placeholder\"?: string | undefined; \"aria-posinset\"?: number | undefined; \"aria-pressed\"?: boolean | \"true\" | \"false\" | \"mixed\" | undefined; \"aria-readonly\"?: Booleanish | undefined; \"aria-relevant\"?: \"text\" | \"additions\" | \"additions removals\" | \"additions text\" | \"all\" | \"removals\" | \"removals additions\" | \"removals text\" | \"text additions\" | \"text removals\" | undefined; \"aria-required\"?: Booleanish | undefined; \"aria-roledescription\"?: string | undefined; \"aria-rowcount\"?: number | undefined; \"aria-rowindex\"?: number | undefined; \"aria-rowindextext\"?: string | undefined; \"aria-rowspan\"?: number | undefined; \"aria-selected\"?: Booleanish | undefined; \"aria-setsize\"?: number | undefined; \"aria-sort\"?: \"none\" | \"ascending\" | \"descending\" | \"other\" | undefined; \"aria-valuemax\"?: number | undefined; \"aria-valuemin\"?: number | undefined; \"aria-valuenow\"?: number | undefined; \"aria-valuetext\"?: string | undefined; children?: ReactNode; dangerouslySetInnerHTML?: { __html: string | TrustedHTML; } | undefined; onCopy?: ClipboardEventHandler<HTMLElement> | undefined; onCopyCapture?: ClipboardEventHandler<HTMLElement> | undefined; onCut?: ClipboardEventHandler<HTMLElement> | undefined; onCutCapture?: ClipboardEventHandler<HTMLElement> | undefined; onPaste?: ClipboardEventHandler<HTMLElement> | undefined; onPasteCapture?: ClipboardEventHandler<HTMLElement> | undefined; onCompositionEnd?: CompositionEventHandler<HTMLElement> | undefined; onCompositionEndCapture?: CompositionEventHandler<HTMLElement> | undefined; onCompositionStart?: CompositionEventHandler<HTMLElement> | undefined; onCompositionStartCapture?: CompositionEventHandler<HTMLElement> | undefined; onCompositionUpdate?: CompositionEventHandler<HTMLElement> | undefined; onCompositionUpdateCapture?: CompositionEventHandler<HTMLElement> | undefined; onFocus?: FocusEventHandler<HTMLElement> | undefined; onFocusCapture?: FocusEventHandler<HTMLElement> | undefined; onBlur?: FocusEventHandler<HTMLElement> | undefined; onBlurCapture?: FocusEventHandler<HTMLElement> | undefined; onChange?: ChangeEventHandler<HTMLElement, Element> | undefined; onChangeCapture?: ChangeEventHandler<HTMLElement, Element> | undefined; onBeforeInput?: InputEventHandler<HTMLElement> | undefined; onBeforeInputCapture?: InputEventHandler<HTMLElement> | undefined; onInput?: InputEventHandler<HTMLElement> | undefined; onInputCapture?: InputEventHandler<HTMLElement> | undefined; onReset?: ReactEventHandler<HTMLElement> | undefined; onResetCapture?: ReactEventHandler<HTMLElement> | undefined; onSubmit?: SubmitEventHandler<HTMLElement> | undefined; onSubmitCapture?: SubmitEventHandler<HTMLElement> | undefined; onInvalid?: ReactEventHandler<HTMLElement> | undefined; onInvalidCapture?: ReactEventHandler<HTMLElement> | undefined; onLoad?: ReactEventHandler<HTMLElement> | undefined; onLoadCapture?: ReactEventHandler<HTMLElement> | undefined; onError?: ReactEventHandler<HTMLElement> | undefined; onErrorCapture?: ReactEventHandler<HTMLElement> | undefined; onKeyDown?: KeyboardEventHandler<HTMLElement> | undefined; onKeyDownCapture?: KeyboardEventHandler<HTMLElement> | undefined; onKeyPress?: KeyboardEventHandler<HTMLElement> | undefined; onKeyPressCapture?: KeyboardEventHandler<HTMLElement> | undefined; onKeyUp?: KeyboardEventHandler<HTMLElement> | undefined; onKeyUpCapture?: KeyboardEventHandler<HTMLElement> | undefined; onAbort?: ReactEventHandler<HTMLElement> | undefined; onAbortCapture?: ReactEventHandler<HTMLElement> | undefined; onCanPlay?: ReactEventHandler<HTMLElement> | undefined; onCanPlayCapture?: ReactEventHandler<HTMLElement> | undefined; onCanPlayThrough?: ReactEventHandler<HTMLElement> | undefined; onCanPlayThroughCapture?: ReactEventHandler<HTMLElement> | undefined; onDurationChange?: ReactEventHandler<HTMLElement> | undefined; onDurationChangeCapture?: ReactEventHandler<HTMLElement> | undefined; onEmptied?: ReactEventHandler<HTMLElement> | undefined; onEmptiedCapture?: ReactEventHandler<HTMLElement> | undefined; onEncrypted?: ReactEventHandler<HTMLElement> | undefined; onEncryptedCapture?: ReactEventHandler<HTMLElement> | undefined; onEnded?: ReactEventHandler<HTMLElement> | undefined; onEndedCapture?: ReactEventHandler<HTMLElement> | undefined; onLoadedData?: ReactEventHandler<HTMLElement> | undefined; onLoadedDataCapture?: ReactEventHandler<HTMLElement> | undefined; onLoadedMetadata?: ReactEventHandler<HTMLElement> | undefined; onLoadedMetadataCapture?: ReactEventHandler<HTMLElement> | undefined; onLoadStart?: ReactEventHandler<HTMLElement> | undefined; onLoadStartCapture?: ReactEventHandler<HTMLElement> | undefined; onPause?: ReactEventHandler<HTMLElement> | undefined; onPauseCapture?: ReactEventHandler<HTMLElement> | undefined; onPlay?: ReactEventHandler<HTMLElement> | undefined; onPlayCapture?: ReactEventHandler<HTMLElement> | undefined; onPlaying?: ReactEventHandler<HTMLElement> | undefined; onPlayingCapture?: ReactEventHandler<HTMLElement> | undefined; onProgress?: ReactEventHandler<HTMLElement> | undefined; onProgressCapture?: ReactEventHandler<HTMLElement> | undefined; onRateChange?: ReactEventHandler<HTMLElement> | undefined; onRateChangeCapture?: ReactEventHandler<HTMLElement> | undefined; onSeeked?: ReactEventHandler<HTMLElement> | undefined; onSeekedCapture?: ReactEventHandler<HTMLElement> | undefined; onSeeking?: ReactEventHandler<HTMLElement> | undefined; onSeekingCapture?: ReactEventHandler<HTMLElement> | undefined; onStalled?: ReactEventHandler<HTMLElement> | undefined; onStalledCapture?: ReactEventHandler<HTMLElement> | undefined; onSuspend?: ReactEventHandler<HTMLElement> | undefined; onSuspendCapture?: ReactEventHandler<HTMLElement> | undefined; onTimeUpdate?: ReactEventHandler<HTMLElement> | undefined; onTimeUpdateCapture?: ReactEventHandler<HTMLElement> | undefined; onVolumeChange?: ReactEventHandler<HTMLElement> | undefined; onVolumeChangeCapture?: ReactEventHandler<HTMLElement> | undefined; onWaiting?: ReactEventHandler<HTMLElement> | undefined; onWaitingCapture?: ReactEventHandler<HTMLElement> | undefined; onAuxClick?: MouseEventHandler<HTMLElement> | undefined; onAuxClickCapture?: MouseEventHandler<HTMLElement> | undefined; onClick?: MouseEventHandler<HTMLElement> | undefined; onClickCapture?: MouseEventHandler<HTMLElement> | undefined; onContextMenu?: MouseEventHandler<HTMLElement> | undefined; onContextMenuCapture?: MouseEventHandler<HTMLElement> | undefined; onDoubleClick?: MouseEventHandler<HTMLElement> | undefined; onDoubleClickCapture?: MouseEventHandler<HTMLElement> | undefined; onDrag?: DragEventHandler<HTMLElement> | undefined; onDragCapture?: DragEventHandler<HTMLElement> | undefined; onDragEnd?: DragEventHandler<HTMLElement> | undefined; onDragEndCapture?: DragEventHandler<HTMLElement> | undefined; onDragEnter?: DragEventHandler<HTMLElement> | undefined; onDragEnterCapture?: DragEventHandler<HTMLElement> | undefined; onDragExit?: DragEventHandler<HTMLElement> | undefined; onDragExitCapture?: DragEventHandler<HTMLElement> | undefined; onDragLeave?: DragEventHandler<HTMLElement> | undefined; onDragLeaveCapture?: DragEventHandler<HTMLElement> | undefined; onDragOver?: DragEventHandler<HTMLElement> | undefined; onDragOverCapture?: DragEventHandler<HTMLElement> | undefined; onDragStart?: DragEventHandler<HTMLElement> | undefined; onDragStartCapture?: DragEventHandler<HTMLElement> | undefined; onDrop?: DragEventHandler<HTMLElement> | undefined; onDropCapture?: DragEventHandler<HTMLElement> | undefined; onMouseDown?: MouseEventHandler<HTMLElement> | undefined; onMouseDownCapture?: MouseEventHandler<HTMLElement> | undefined; onMouseEnter?: MouseEventHandler<HTMLElement> | undefined; onMouseLeave?: MouseEventHandler<HTMLElement> | undefined; onMouseMove?: MouseEventHandler<HTMLElement> | undefined; onMouseMoveCapture?: MouseEventHandler<HTMLElement> | undefined; onMouseOut?: MouseEventHandler<HTMLElement> | undefined; onMouseOutCapture?: MouseEventHandler<HTMLElement> | undefined; onMouseOver?: MouseEventHandler<HTMLElement> | undefined; onMouseOverCapture?: MouseEventHandler<HTMLElement> | undefined; onMouseUp?: MouseEventHandler<HTMLElement> | undefined; onMouseUpCapture?: MouseEventHandler<HTMLElement> | undefined; onSelect?: ReactEventHandler<HTMLElement> | undefined; onSelectCapture?: ReactEventHandler<HTMLElement> | undefined; onTouchCancel?: TouchEventHandler<HTMLElement> | undefined; onTouchCancelCapture?: TouchEventHandler<HTMLElement> | undefined; onTouchEnd?: TouchEventHandler<HTMLElement> | undefined; onTouchEndCapture?: TouchEventHandler<HTMLElement> | undefined; onTouchMove?: TouchEventHandler<HTMLElement> | undefined; onTouchMoveCapture?: TouchEventHandler<HTMLElement> | undefined; onTouchStart?: TouchEventHandler<HTMLElement> | undefined; onTouchStartCapture?: TouchEventHandler<HTMLElement> | undefined; onPointerDown?: PointerEventHandler<HTMLElement> | undefined; onPointerDownCapture?: PointerEventHandler<HTMLElement> | undefined; onPointerMove?: PointerEventHandler<HTMLElement> | undefined; onPointerMoveCapture?: PointerEventHandler<HTMLElement> | undefined; onPointerUp?: PointerEventHandler<HTMLElement> | undefined; onPointerUpCapture?: PointerEventHandler<HTMLElement> | undefined; onPointerCancel?: PointerEventHandler<HTMLElement> | undefined; onPointerCancelCapture?: PointerEventHandler<HTMLElement> | undefined; onPointerEnter?: PointerEventHandler<HTMLElement> | undefined; onPointerLeave?: PointerEventHandler<HTMLElement> | undefined; onPointerOver?: PointerEventHandler<HTMLElement> | undefined; onPointerOverCapture?: PointerEventHandler<HTMLElement> | undefined; onPointerOut?: PointerEventHandler<HTMLElement> | undefined; onPointerOutCapture?: PointerEventHandler<HTMLElement> | undefined; onGotPointerCapture?: PointerEventHandler<HTMLElement> | undefined; onGotPointerCaptureCapture?: PointerEventHandler<HTMLElement> | undefined; onLostPointerCapture?: PointerEventHandler<HTMLElement> | undefined; onLostPointerCaptureCapture?: PointerEventHandler<HTMLElement> | undefined; onScroll?: UIEventHandler<HTMLElement> | undefined; onScrollCapture?: UIEventHandler<HTMLElement> | undefined; onScrollEnd?: UIEventHandler<HTMLElement> | undefined; onScrollEndCapture?: UIEventHandler<HTMLElement> | undefined; onWheel?: WheelEventHandler<HTMLElement> | undefined; onWheelCapture?: WheelEventHandler<HTMLElement> | undefined; onAnimationStart?: AnimationEventHandler<HTMLElement> | undefined; onAnimationStartCapture?: AnimationEventHandler<HTMLElement> | undefined; onAnimationEnd?: AnimationEventHandler<HTMLElement> | undefined; onAnimationEndCapture?: AnimationEventHandler<HTMLElement> | undefined; onAnimationIteration?: AnimationEventHandler<HTMLElement> | undefined; onAnimationIterationCapture?: AnimationEventHandler<HTMLElement> | undefined; onToggle?: ToggleEventHandler<HTMLElement> | undefined; onBeforeToggle?: ToggleEventHandler<HTMLElement> | undefined; onTransitionCancel?: TransitionEventHandler<HTMLElement> | undefined; onTransitionCancelCapture?: TransitionEventHandler<HTMLElement> | undefined; onTransitionEnd?: TransitionEventHandler<HTMLElement> | undefined; onTransitionEndCapture?: TransitionEventHandler<HTMLElement> | undefined; onTransitionRun?: TransitionEventHandler<HTMLElement> | undefined; onTransitionRunCapture?: TransitionEventHandler<HTMLElement> | undefined; onTransitionStart?: TransitionEventHandler<HTMLElement> | undefined; onTransitionStartCapture?: TransitionEventHandler<HTMLElement> | undefined; className: string; }, Element>",
+    "props": [
+      {
+        "name": "variant",
+        "type": "\"code\" | \"blockquote\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"p\" | \"small\" | \"lead\" | \"muted\" | undefined",
+        "required": false
+      },
+      {
+        "name": "as",
+        "type": "\"code\" | \"blockquote\" | \"div\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"p\" | \"span\" | undefined",
         "required": false
       }
     ]

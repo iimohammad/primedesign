@@ -11,11 +11,11 @@ copyFileSync(join(fontDir, 'OFL.txt'), 'dist/fonts/OFL.txt');
 const fontCSS =
   '@font-face{font-family:Vazirmatn;src:url("./fonts/Vazirmatn.woff2") format("woff2");font-weight:100 900;font-display:swap;}';
 writeFileSync('dist/font.css', fontCSS);
-const files = ['base', 'components', 'commerce'];
+const files = ['base', 'components', 'commerce', 'advanced', 'ai'];
 writeFileSync('dist/tokens.css', tokensCSS());
 for (const f of files) writeFileSync(`dist/${f}.css`, readFileSync(`src/${f}.css`, 'utf8'));
 const css =
-  `@layer primedesign.tokens,primedesign.base,primedesign.components,primedesign.commerce;\n@layer primedesign.tokens{${tokensCSS()}}\n` +
+  `@layer primedesign.tokens,primedesign.base,primedesign.components,primedesign.commerce,primedesign.advanced,primedesign.ai;\n@layer primedesign.tokens{${tokensCSS()}}\n` +
   files.map((f) => `@layer primedesign.${f}{${readFileSync(`src/${f}.css`, 'utf8')}}`).join('\n');
 writeFileSync('dist/primedesign.css', fontCSS + '\n' + css);
 writeFileSync('dist/nofont.css', css);

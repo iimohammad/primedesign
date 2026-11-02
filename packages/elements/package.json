@@ -1,0 +1,49 @@
+{
+  "name": "@primedesign/elements",
+  "version": "0.2.0",
+  "description": "Standalone PrimeDesign Web Components for HTML, Vue, Angular, Svelte and WordPress",
+  "type": "module",
+  "main": "./dist/primedesign-elements.umd.cjs",
+  "module": "./dist/primedesign-elements.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/primedesign-elements.js",
+      "default": "./dist/primedesign-elements.js"
+    },
+    "./browser": "./dist/primedesign-elements.umd.cjs"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json --emitDeclarationOnly && vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@primedesign/tokens": "0.2.0",
+    "@primedesign/persian": "0.2.0",
+    "@primedesign/icons": "0.2.0",
+    "@primedesign/react": "0.2.0",
+    "@primedesign/forms": "0.2.0",
+    "@primedesign/data": "0.2.0",
+    "@primedesign/commerce": "0.2.0",
+    "@primedesign/blocks": "0.2.0",
+    "@primedesign/ai": "0.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iimohammad/primedesign.git",
+    "directory": "packages/elements"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

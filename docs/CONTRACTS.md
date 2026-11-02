@@ -13,6 +13,10 @@
 - `TreeView` is a nested native disclosure list, not an ARIA tree widget. Charts provide equivalent data tables, not a full chart analytics engine.
 - `PasswordStrength` is visual feedback, not a password policy or security estimator. Apply your actual policy on the server.
 - CSS complete bundle includes scoped resets, but semantic tokens default on `:root`. Import individual files or apply explicit providers when embedding in an existing app.
-- CLI `add` generates typed re-export facades. It does not copy third-party source or install npm dependencies automatically. Use `--dry-run` for inspection and `--force` only when replacement is intended.
+- CLI `add` generates typed re-export facades; `add --source` copies PrimeDesign implementation modules and their local source graph. Shared tokens, CSS and package imports remain dependencies. It does not copy third-party source or install npm dependencies automatically. Use `--dry-run` for inspection and `--force` only when replacement is intended.
 - Native modal dialogs use the browser top layer. Popovers stay inside their provider subtree to preserve theme and locale; a transformed/containing ancestor can alter fixed positioning. Avoid transformed overlay ancestors in app layouts.
 - Themes choose button foreground by contrast; arbitrary custom color combinations and consumer CSS need their own accessibility audit. No blanket WCAG certification is claimed.
+
+- Browser custom elements share in-memory context within each `pd-provider`; they render through an internally bundled React runtime. Shadow DOM style customization uses variables and slots. See [UNIVERSAL.md](UNIVERSAL.md) for form association, events, browser/CSP requirements and WordPress validation limits.
+- AI widgets display supplied content and execution events. They do not invoke models, execute shell commands or run agents. `streamCompletion` reads an application-provided SSE/NDJSON endpoint with cancellation and bounded event sizes.
+- ContextMenu and Menubar support flat menu actions. Nested menu trees, headless primitives, Gregorian calendars and the full chart/plugin ecosystem of other libraries are not provided. The coverage map documents narrower equivalents.

@@ -1,4 +1,5 @@
 'use client';
+import { getActiveElement, eventInside, composedQuery, composedContains } from './utils.js';
 import { Icon } from '@primedesign/icons';
 import {
   createContext,
@@ -46,40 +47,46 @@ export function Dialog({
     const d = ref.current;
     if (!d) return;
     if (open && !d.open) {
-      opener.current = document.activeElement as HTMLElement;
+      opener.current = getActiveElement() as HTMLElement;
       d.showModal();
-      d.querySelector<HTMLElement>('[data-pd-autofocus], [autofocus]')?.focus();
+      composedQuery(d, '[data-pd-autofocus], [autofocus]')[0]?.focus();
     } else if (!open && d.open) {
       d.close();
       opener.current?.focus();
     }
   }, [open]);
+  useEffect(() => {
+    const d = ref.current;
+    if (!d) return;
+    const handle = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      const elements = composedQuery(d, focusable).filter(
+        (el) => !el.closest('[hidden]') && el.getClientRects().length > 0,
+      );
+      const first = elements[0],
+        last = elements.at(-1);
+      if (!first) {
+        e.preventDefault();
+        d.focus();
+        return;
+      }
+      if (e.shiftKey && getActiveElement() === first) {
+        e.preventDefault();
+        last?.focus();
+      } else if (!e.shiftKey && getActiveElement() === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    d.addEventListener('keydown', handle);
+    return () => d.removeEventListener('keydown', handle);
+  }, []);
   return (
     <dialog
       ref={ref}
       className={cx('pd-dialog', `pd-dialog--${size}`, `pd-dialog--${placement}`, className)}
       aria-labelledby={`${id}-title`}
       aria-describedby={description ? `${id}-desc` : undefined}
-      onKeyDown={(e) => {
-        if (e.key !== 'Tab') return;
-        const elements = Array.from(
-          e.currentTarget.querySelectorAll<HTMLElement>(focusable),
-        ).filter((el) => !el.closest('[hidden]') && el.getClientRects().length > 0);
-        const first = elements[0],
-          last = elements.at(-1);
-        if (!first) {
-          e.preventDefault();
-          e.currentTarget.focus();
-          return;
-        }
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last?.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
-      }}
       onCancel={(e) => {
         e.preventDefault();
         if (dismissible) onChange.current(false);
@@ -155,9 +162,9 @@ export function Popover({
       setPos({ left, top, maxHeight: Math.max(120, window.innerHeight - 16) });
     };
     place();
-    panel.current?.querySelector<HTMLElement>(focusable)?.focus();
+    if (panel.current) composedQuery(panel.current, focusable)[0]?.focus();
     const down = (e: PointerEvent) => {
-      if (!wrap.current?.contains(e.target as Node)) setOpen(false);
+      if (!eventInside(wrap.current, e)) setOpen(false);
     };
     document.addEventListener('pointerdown', down);
     window.addEventListener('resize', place);
@@ -198,7 +205,8 @@ export function Popover({
             }
           }}
           onBlur={(e) => {
-            if (e.relatedTarget && !wrap.current?.contains(e.relatedTarget as Node)) setOpen(false);
+            if (e.relatedTarget && !composedContains(wrap.current, e.relatedTarget as Node))
+              setOpen(false);
           }}
         >
           {children}
@@ -259,7 +267,7 @@ export function DropdownMenu({
           const list = Array.from(
             e.currentTarget.querySelectorAll<HTMLButtonElement>('button:not(:disabled)'),
           );
-          const i = list.indexOf(document.activeElement as HTMLButtonElement);
+          const i = list.indexOf(getActiveElement() as HTMLButtonElement);
           if (['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(e.key)) {
             e.preventDefault();
             list[

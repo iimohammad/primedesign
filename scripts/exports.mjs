@@ -1,7 +1,7 @@
 // Next.js client boundaries require statically named exports, not export *.
 import ts from 'typescript';
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
-for (const pkg of ['react', 'forms', 'data', 'commerce', 'blocks']) {
+for (const pkg of ['react', 'forms', 'data', 'commerce', 'blocks', 'ai']) {
   const directory = `packages/${pkg}/src`;
   const lines = ["'use client';"];
   for (const filename of readdirSync(directory).filter(

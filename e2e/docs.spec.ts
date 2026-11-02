@@ -16,6 +16,11 @@ test('all documentation sections load without runtime errors or page overflow', 
     'theme',
     'icons',
     'installation',
+    'advanced',
+    'ai',
+    'universal',
+    'registry',
+    'coverage',
   ]) {
     await page.goto(`/#${section}`);
     await expect(page.locator('main h1')).toBeVisible();

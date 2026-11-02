@@ -1,4 +1,5 @@
 'use client';
+import { getActiveElement, eventInside } from './utils.js';
 import { Icon } from '@primedesign/icons';
 import {
   formatCardNumber,
@@ -85,7 +86,7 @@ export function Combobox({
   useEffect(() => {
     if (!open) return;
     const down = (e: PointerEvent) => {
-      if (!wrap.current?.contains(e.target as Node)) {
+      if (!eventInside(wrap.current, e)) {
         setOpen(false);
         setQuery('');
       }

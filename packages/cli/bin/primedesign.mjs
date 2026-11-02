@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import { existsSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, mkdirSync, writeFileSync, realpathSync } from 'node:fs';
 import { resolve, relative, dirname, isAbsolute } from 'node:path';
 import { createTheme } from '@primedesign/tokens';
+import { loadRegistry, sourceOutputs, sourceDiff } from './source.mjs';
 const registry = {
   button: ['react', 'Button', 'ButtonProps'],
   input: ['react', 'Input', 'InputProps'],
@@ -38,7 +39,8 @@ try {
   while (args.length) {
     const arg = args.shift();
     if (arg.startsWith('--')) {
-      if (['--force', '--dry-run', '--help'].includes(arg)) options[arg.slice(2)] = true;
+      if (['--force', '--dry-run', '--help', '--source', '--json', '--all'].includes(arg))
+        options[arg.slice(2)] = true;
       else if (['--cwd', '--brand', '--radius'].includes(arg)) {
         const value = args.shift();
         if (!value || value.startsWith('--')) throw new Error(`Missing value for ${arg}`);
@@ -48,19 +50,53 @@ try {
   }
   if (command === 'help' || options.help) {
     console.log(
-      'PrimeDesign\n\n  primedesign init [--cwd path]\n  primedesign add button product-card [--cwd path]\n  primedesign theme --brand "#6254df" [--radius 16]\n  primedesign list\n\nOptions: --force, --dry-run. Existing files are never overwritten by default.',
+      'PrimeDesign\n\n  primedesign init [--cwd path]\n  primedesign add button product-card [--source] [--cwd path]\n  primedesign theme --brand "#6254df" [--radius 16]\n  primedesign list [--source] [--json]\n  primedesign search query [--json]\n  primedesign diff button [--json]\n  primedesign doctor [--json]\n\nOptions: --all, --source, --json, --force, --dry-run. Existing files are never overwritten by default.',
     );
     process.exit(0);
   }
   if (command === 'list') {
+    {
+      const items = Object.values(loadRegistry().items).map(
+        ({ name, package: pkg, exportName, dependencies }) => ({
+          name,
+          package: pkg,
+          exportName,
+          dependencies,
+        }),
+      );
+      console.log(
+        options.json
+          ? JSON.stringify(items, null, 2)
+          : items.map((item) => `${item.name.padEnd(28)} @primedesign/${item.package}`).join('\n'),
+      );
+      process.exit(0);
+    }
     for (const [name, [pkg]] of Object.entries(registry))
       console.log(`${name.padEnd(22)} @primedesign/${pkg}`);
+    process.exit(0);
+  }
+  if (command === 'search') {
+    const query = names.join(' ').toLowerCase();
+    const results = Object.values(loadRegistry().items).filter((item) =>
+      (item.name + ' ' + item.package).includes(query),
+    );
+    console.log(
+      options.json
+        ? JSON.stringify(
+            results.map(({ files, facade, ...item }) => item),
+            null,
+            2,
+          )
+        : results.map((item) => item.name).join('\n'),
+    );
     process.exit(0);
   }
   const cwd = resolve(options.cwd ?? process.cwd());
   if (!existsSync(resolve(cwd, 'package.json')))
     throw new Error('Choose an existing application directory containing package.json');
   const safePath = (path) => {
+    if (typeof path !== 'string' || !path)
+      throw new Error('Configure a non-empty project-relative output path');
     if (isAbsolute(path)) throw new Error('Use a project-relative output path');
     const absolute = resolve(cwd, path),
       rel = relative(cwd, absolute);
@@ -70,6 +106,16 @@ try {
       rel.split(/[\\/]/).some((p) => p === '.git' || p === 'node_modules')
     )
       throw new Error('Output must stay inside your application source');
+    let ancestor = absolute;
+    while (!existsSync(ancestor) && ancestor !== dirname(ancestor)) ancestor = dirname(ancestor);
+    const actual = relative(realpathSync(cwd), realpathSync(ancestor));
+    if (
+      actual === '..' ||
+      actual.startsWith('../') ||
+      isAbsolute(actual) ||
+      actual.split(/[\\/]/).some((p) => p === '.git' || p === 'node_modules')
+    )
+      throw new Error('Output symlinks must stay inside your application source');
     return absolute;
   };
   const configPath = resolve(cwd, 'primedesign.config.json'),
@@ -77,6 +123,32 @@ try {
       ? JSON.parse(readFileSync(configPath, 'utf8'))
       : { components: 'src/components/ui', styles: 'src/styles' };
   const outputs = [];
+  if (command === 'diff') {
+    const diff = sourceDiff(names, config, safePath);
+    console.log(
+      options.json
+        ? JSON.stringify(diff, null, 2)
+        : diff.map((item) => `${item.status.padEnd(10)} ${item.path}`).join('\n'),
+    );
+    process.exit(0);
+  }
+  if (command === 'doctor') {
+    const checks = [
+      { check: 'package.json', ok: existsSync(resolve(cwd, 'package.json')) },
+      { check: 'configuration', ok: existsSync(configPath) },
+      { check: 'components path', ok: typeof config.components === 'string' },
+      { check: 'styles path', ok: typeof config.styles === 'string' },
+    ];
+    safePath(config.components);
+    safePath(config.styles);
+    console.log(
+      options.json
+        ? JSON.stringify(checks, null, 2)
+        : checks.map((item) => `${item.ok ? 'OK' : 'MISSING'} ${item.check}`).join('\n'),
+    );
+    if (checks.some((item) => !item.ok)) process.exitCode = 1;
+    process.exit();
+  }
   if (command === 'init') {
     outputs.push([
       'primedesign.config.json',
@@ -100,15 +172,28 @@ try {
       '@import "@primedesign/css";\n/* Put brand-specific overrides below the import. */\n',
     ]);
   } else if (command === 'add') {
+    if (options.all) names.push(...Object.keys(loadRegistry().items));
     if (!names.length) throw new Error('Specify at least one component; run primedesign list');
-    for (const name of new Set(names)) {
-      const entry = registry[name];
-      if (!entry) throw new Error(`Unknown component: ${name}`);
-      const [pkg, component, type] = entry;
-      outputs.push([
-        `${config.components}/${name}.tsx`,
-        `"use client";\n// Your application owns this facade. Compose or wrap the component here.\nexport { ${component} } from "@primedesign/${pkg}";\n${type ? `export type { ${type} } from "@primedesign/${pkg}";\n` : ''}`,
-      ]);
+    if (options.source) {
+      outputs.push(...sourceOutputs([...new Set(names)], config));
+    } else {
+      if (!names.length) throw new Error('Specify at least one component; run primedesign list');
+      for (const name of new Set(names)) {
+        const item = Object.hasOwn(loadRegistry().items, name)
+          ? loadRegistry().items[name]
+          : undefined;
+        const entry = Object.hasOwn(registry, name)
+          ? registry[name]
+          : item
+            ? [item.package, item.exportName]
+            : undefined;
+        if (!entry) throw new Error(`Unknown component: ${name}`);
+        const [pkg, component, type] = entry;
+        outputs.push([
+          `${config.components}/${name}.tsx`,
+          `"use client";\n// Your application owns this facade. Compose or wrap the component here.\nexport { ${component} } from "@primedesign/${pkg}";\n${type ? `export type { ${type} } from "@primedesign/${pkg}";\n` : ''}`,
+        ]);
+      }
     }
   } else if (command === 'theme')
     outputs.push([
@@ -119,7 +204,12 @@ try {
       }),
     ]);
   else throw new Error(`Unknown command: ${command}`);
-  const paths = outputs.map(([path, content]) => [safePath(path), content]);
+  const paths = outputs
+    .map(([path, content]) => [safePath(path), content])
+    .filter(
+      ([path, content]) =>
+        !(options.source && existsSync(path) && readFileSync(path, 'utf8') === content),
+    );
   for (const [path] of paths)
     if (existsSync(path) && !options.force)
       throw new Error(`File already exists: ${relative(cwd, path)} (use --force to replace)`);

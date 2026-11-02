@@ -1315,12 +1315,12 @@ export function Installation() {
       <Section
         title="CLI پروژه"
         code={
-          '# After building / packing the workspace\nnode packages/cli/bin/primedesign.mjs init --cwd /path/to/app\nnode packages/cli/bin/primedesign.mjs add button product-card --cwd /path/to/app\nnode packages/cli/bin/primedesign.mjs list'
+          '# After building / packing the workspace\nnode packages/cli/bin/primedesign.mjs init --cwd /path/to/app\nnode packages/cli/bin/primedesign.mjs add button product-card --source --cwd /path/to/app\nnode packages/cli/bin/primedesign.mjs list'
         }
       >
         <p className="demo-note">
-          CLI فایل تنظیمات و فایل‌های واسط قابل ویرایش می‌سازد؛ فایل موجود را بدون --force بازنویسی
-          نمی‌کند و هیچ اسکریپت دانلودی اجرا نمی‌کند.
+          CLI فایل تنظیمات، واسط‌ها یا با --source خود پیاده‌سازی قابل ویرایش را می‌سازد؛ فایل موجود
+          را بدون --force بازنویسی نمی‌کند و هیچ اسکریپت دانلودی اجرا نمی‌کند.
         </p>
       </Section>
       <Section

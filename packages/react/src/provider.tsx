@@ -11,6 +11,10 @@ import {
 } from 'react';
 export type Locale = 'fa-IR' | 'en-US' | 'ar';
 interface DesignContext {
+  brand: string;
+  radius: number;
+  density: Density;
+  fontFamily: string;
   locale: Locale;
   dir: 'rtl' | 'ltr';
   digits: 'fa' | 'latin';
@@ -19,6 +23,10 @@ interface DesignContext {
   resolvedTheme: 'light' | 'dark';
 }
 const Context = createContext<DesignContext>({
+  brand: '#6254df',
+  radius: 16,
+  density: 'comfortable',
+  fontFamily: 'Vazirmatn, Tahoma, system-ui, sans-serif',
   locale: 'fa-IR',
   dir: 'rtl',
   digits: 'fa',
@@ -95,7 +103,20 @@ export function PrimeProvider({
     } as CSSProperties;
   }, [brand, radius, fontFamily]);
   return (
-    <Context.Provider value={{ locale, dir, digits, theme, setTheme, resolvedTheme }}>
+    <Context.Provider
+      value={{
+        locale,
+        dir,
+        digits,
+        theme,
+        setTheme,
+        resolvedTheme,
+        brand,
+        radius,
+        density,
+        fontFamily,
+      }}
+    >
       <div
         className={['pd-root', className].filter(Boolean).join(' ')}
         dir={dir}

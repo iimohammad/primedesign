@@ -1,6 +1,6 @@
 {
   "name": "@primedesign/cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "PrimeDesign project initializer and component facade generator",
   "type": "module",
   "bin": {
@@ -9,10 +9,11 @@
   "files": [
     "bin",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "registry"
   ],
   "dependencies": {
-    "@primedesign/tokens": "0.1.0"
+    "@primedesign/tokens": "0.2.0"
   },
   "engines": {
     "node": ">=22"

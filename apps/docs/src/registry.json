@@ -1,0 +1,2402 @@
+[
+  {
+    "name": "accordion",
+    "package": "react",
+    "exportName": "Accordion",
+    "entry": "react/src/navigation.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "alert",
+    "package": "react",
+    "exportName": "Alert",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "aspect-ratio",
+    "package": "react",
+    "exportName": "AspectRatio",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "attachment",
+    "package": "react",
+    "exportName": "Attachment",
+    "entry": "react/src/content.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 6
+  },
+  {
+    "name": "avatar",
+    "package": "react",
+    "exportName": "Avatar",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "avatar-group",
+    "package": "react",
+    "exportName": "AvatarGroup",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "badge",
+    "package": "react",
+    "exportName": "Badge",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "breadcrumb",
+    "package": "react",
+    "exportName": "Breadcrumb",
+    "entry": "react/src/navigation.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "button",
+    "package": "react",
+    "exportName": "Button",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "button-group",
+    "package": "react",
+    "exportName": "ButtonGroup",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "calendar",
+    "package": "react",
+    "exportName": "Calendar",
+    "entry": "react/src/calendar.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "card",
+    "package": "react",
+    "exportName": "Card",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "card-body",
+    "package": "react",
+    "exportName": "CardBody",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "card-footer",
+    "package": "react",
+    "exportName": "CardFooter",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "card-header",
+    "package": "react",
+    "exportName": "CardHeader",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "card-number-input",
+    "package": "react",
+    "exportName": "CardNumberInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "carousel",
+    "package": "react",
+    "exportName": "Carousel",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "checkbox",
+    "package": "react",
+    "exportName": "Checkbox",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "chip-group",
+    "package": "react",
+    "exportName": "ChipGroup",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "code-block",
+    "package": "react",
+    "exportName": "CodeBlock",
+    "entry": "react/src/content.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 6
+  },
+  {
+    "name": "collapsible",
+    "package": "react",
+    "exportName": "Collapsible",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "color-picker",
+    "package": "react",
+    "exportName": "ColorPicker",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "combobox",
+    "package": "react",
+    "exportName": "Combobox",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "command-palette",
+    "package": "react",
+    "exportName": "CommandPalette",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "confirm-dialog",
+    "package": "react",
+    "exportName": "ConfirmDialog",
+    "entry": "react/src/overlays.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "container",
+    "package": "react",
+    "exportName": "Container",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "context-menu",
+    "package": "react",
+    "exportName": "ContextMenu",
+    "entry": "react/src/menus.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "copy-button",
+    "package": "react",
+    "exportName": "CopyButton",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "countdown",
+    "package": "react",
+    "exportName": "Countdown",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "date-picker",
+    "package": "react",
+    "exportName": "DatePicker",
+    "entry": "react/src/calendar.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "date-range-picker",
+    "package": "react",
+    "exportName": "DateRangePicker",
+    "entry": "react/src/calendar.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "dialog",
+    "package": "react",
+    "exportName": "Dialog",
+    "entry": "react/src/overlays.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "divider",
+    "package": "react",
+    "exportName": "Divider",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "drawer",
+    "package": "react",
+    "exportName": "Drawer",
+    "entry": "react/src/overlays.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "dropdown-menu",
+    "package": "react",
+    "exportName": "DropdownMenu",
+    "entry": "react/src/overlays.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "empty-state",
+    "package": "react",
+    "exportName": "EmptyState",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "field",
+    "package": "react",
+    "exportName": "Field",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "file-upload",
+    "package": "react",
+    "exportName": "FileUpload",
+    "entry": "react/src/upload.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "grid",
+    "package": "react",
+    "exportName": "Grid",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "hover-card",
+    "package": "react",
+    "exportName": "HoverCard",
+    "entry": "react/src/menus.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "iban-input",
+    "package": "react",
+    "exportName": "IbanInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "icon-button",
+    "package": "react",
+    "exportName": "IconButton",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "inline-edit",
+    "package": "react",
+    "exportName": "InlineEdit",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "input",
+    "package": "react",
+    "exportName": "Input",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "input-group",
+    "package": "react",
+    "exportName": "InputGroup",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "input-group-addon",
+    "package": "react",
+    "exportName": "InputGroupAddon",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "input-group-input",
+    "package": "react",
+    "exportName": "InputGroupInput",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "item",
+    "package": "react",
+    "exportName": "Item",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "item-group",
+    "package": "react",
+    "exportName": "ItemGroup",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "kbd",
+    "package": "react",
+    "exportName": "Kbd",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "label",
+    "package": "react",
+    "exportName": "Label",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "marker",
+    "package": "react",
+    "exportName": "Marker",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "menubar",
+    "package": "react",
+    "exportName": "Menubar",
+    "entry": "react/src/menus.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "message-bubble",
+    "package": "react",
+    "exportName": "MessageBubble",
+    "entry": "react/src/content.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 6
+  },
+  {
+    "name": "message-scroller",
+    "package": "react",
+    "exportName": "MessageScroller",
+    "entry": "react/src/content.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 6
+  },
+  {
+    "name": "meter",
+    "package": "react",
+    "exportName": "Meter",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "mobile-input",
+    "package": "react",
+    "exportName": "MobileInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "month-picker",
+    "package": "react",
+    "exportName": "MonthPicker",
+    "entry": "react/src/calendar.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "multi-select",
+    "package": "react",
+    "exportName": "MultiSelect",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "national-id-input",
+    "package": "react",
+    "exportName": "NationalIdInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "navigation-menu",
+    "package": "react",
+    "exportName": "NavigationMenu",
+    "entry": "react/src/menus.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "number-input",
+    "package": "react",
+    "exportName": "NumberInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "otp-input",
+    "package": "react",
+    "exportName": "OtpInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "pagination",
+    "package": "react",
+    "exportName": "Pagination",
+    "entry": "react/src/navigation.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "password-input",
+    "package": "react",
+    "exportName": "PasswordInput",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "password-strength",
+    "package": "react",
+    "exportName": "PasswordStrength",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "persian-input",
+    "package": "react",
+    "exportName": "PersianInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "popover",
+    "package": "react",
+    "exportName": "Popover",
+    "entry": "react/src/overlays.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "postal-code-input",
+    "package": "react",
+    "exportName": "PostalCodeInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "price-input",
+    "package": "react",
+    "exportName": "PriceInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "progress",
+    "package": "react",
+    "exportName": "Progress",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "province-select",
+    "package": "react",
+    "exportName": "ProvinceSelect",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "questionnaire",
+    "package": "react",
+    "exportName": "Questionnaire",
+    "entry": "react/src/content.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 6
+  },
+  {
+    "name": "radio-group",
+    "package": "react",
+    "exportName": "RadioGroup",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "rating",
+    "package": "react",
+    "exportName": "Rating",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "relative-time",
+    "package": "react",
+    "exportName": "RelativeTime",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "resizable-panel-group",
+    "package": "react",
+    "exportName": "ResizablePanelGroup",
+    "entry": "react/src/layouts.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian"
+    ],
+    "fileCount": 5
+  },
+  {
+    "name": "scroll-area",
+    "package": "react",
+    "exportName": "ScrollArea",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "segmented-control",
+    "package": "react",
+    "exportName": "SegmentedControl",
+    "entry": "react/src/navigation.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "select",
+    "package": "react",
+    "exportName": "Select",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "separator",
+    "package": "react",
+    "exportName": "Separator",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "sidebar",
+    "package": "react",
+    "exportName": "Sidebar",
+    "entry": "react/src/layouts.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian"
+    ],
+    "fileCount": 5
+  },
+  {
+    "name": "sidebar-trigger",
+    "package": "react",
+    "exportName": "SidebarTrigger",
+    "entry": "react/src/layouts.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian"
+    ],
+    "fileCount": 5
+  },
+  {
+    "name": "side-nav",
+    "package": "react",
+    "exportName": "SideNav",
+    "entry": "react/src/navigation.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "skeleton",
+    "package": "react",
+    "exportName": "Skeleton",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "slider",
+    "package": "react",
+    "exportName": "Slider",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "spinner",
+    "package": "react",
+    "exportName": "Spinner",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "splitter",
+    "package": "react",
+    "exportName": "Splitter",
+    "entry": "react/src/layouts.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian"
+    ],
+    "fileCount": 5
+  },
+  {
+    "name": "stack",
+    "package": "react",
+    "exportName": "Stack",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "stat-card",
+    "package": "react",
+    "exportName": "StatCard",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "stepper",
+    "package": "react",
+    "exportName": "Stepper",
+    "entry": "react/src/navigation.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "switch",
+    "package": "react",
+    "exportName": "Switch",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "table",
+    "package": "react",
+    "exportName": "Table",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "table-body",
+    "package": "react",
+    "exportName": "TableBody",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "table-caption",
+    "package": "react",
+    "exportName": "TableCaption",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "table-cell",
+    "package": "react",
+    "exportName": "TableCell",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "table-head",
+    "package": "react",
+    "exportName": "TableHead",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "table-header",
+    "package": "react",
+    "exportName": "TableHeader",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "table-row",
+    "package": "react",
+    "exportName": "TableRow",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "tabs",
+    "package": "react",
+    "exportName": "Tabs",
+    "entry": "react/src/navigation.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "tag-input",
+    "package": "react",
+    "exportName": "TagInput",
+    "entry": "react/src/selection.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 4
+  },
+  {
+    "name": "textarea",
+    "package": "react",
+    "exportName": "Textarea",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "time-input",
+    "package": "react",
+    "exportName": "TimeInput",
+    "entry": "react/src/misc.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "timeline",
+    "package": "react",
+    "exportName": "Timeline",
+    "entry": "react/src/navigation.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "toggle",
+    "package": "react",
+    "exportName": "Toggle",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "toggle-group",
+    "package": "react",
+    "exportName": "ToggleGroup",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "tooltip",
+    "package": "react",
+    "exportName": "Tooltip",
+    "entry": "react/src/overlays.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "trace",
+    "package": "react",
+    "exportName": "Trace",
+    "entry": "react/src/content.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 6
+  },
+  {
+    "name": "tree-view",
+    "package": "react",
+    "exportName": "TreeView",
+    "entry": "react/src/navigation.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "typography",
+    "package": "react",
+    "exportName": "Typography",
+    "entry": "react/src/foundation.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/react"
+    ],
+    "fileCount": 3
+  },
+  {
+    "name": "visually-hidden",
+    "package": "react",
+    "exportName": "VisuallyHidden",
+    "entry": "react/src/primitives.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "react",
+      "@primedesign/react"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "address-card",
+    "package": "commerce",
+    "exportName": "AddressCard",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "brand-card",
+    "package": "commerce",
+    "exportName": "BrandCard",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "bundle-card",
+    "package": "commerce",
+    "exportName": "BundleCard",
+    "entry": "commerce/src/merchandising.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "cart-line-item",
+    "package": "commerce",
+    "exportName": "CartLineItem",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "cart-summary",
+    "package": "commerce",
+    "exportName": "CartSummary",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "category-card",
+    "package": "commerce",
+    "exportName": "CategoryCard",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "checkout-stepper",
+    "package": "commerce",
+    "exportName": "CheckoutStepper",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "color-swatches",
+    "package": "commerce",
+    "exportName": "ColorSwatches",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "compare-table",
+    "package": "commerce",
+    "exportName": "CompareTable",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "coupon-card",
+    "package": "commerce",
+    "exportName": "CouponCard",
+    "entry": "commerce/src/merchandising.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "coupon-input",
+    "package": "commerce",
+    "exportName": "CouponInput",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "discount-badge",
+    "package": "commerce",
+    "exportName": "DiscountBadge",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "free-shipping-progress",
+    "package": "commerce",
+    "exportName": "FreeShippingProgress",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "mini-cart",
+    "package": "commerce",
+    "exportName": "MiniCart",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "order-card",
+    "package": "commerce",
+    "exportName": "OrderCard",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "order-tracking",
+    "package": "commerce",
+    "exportName": "OrderTracking",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "price",
+    "package": "commerce",
+    "exportName": "Price",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "product-card",
+    "package": "commerce",
+    "exportName": "ProductCard",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "product-card-skeleton",
+    "package": "commerce",
+    "exportName": "ProductCardSkeleton",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "product-detail",
+    "package": "commerce",
+    "exportName": "ProductDetail",
+    "entry": "commerce/src/merchandising.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "product-gallery",
+    "package": "commerce",
+    "exportName": "ProductGallery",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "product-grid",
+    "package": "commerce",
+    "exportName": "ProductGrid",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "product-image",
+    "package": "commerce",
+    "exportName": "ProductImage",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "promo-card",
+    "package": "commerce",
+    "exportName": "PromoCard",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "quick-view",
+    "package": "commerce",
+    "exportName": "QuickView",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "review-card",
+    "package": "commerce",
+    "exportName": "ReviewCard",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "seller-card",
+    "package": "commerce",
+    "exportName": "SellerCard",
+    "entry": "commerce/src/merchandising.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "shipping-method-picker",
+    "package": "commerce",
+    "exportName": "ShippingMethodPicker",
+    "entry": "commerce/src/checkout.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 2
+  },
+  {
+    "name": "stock-badge",
+    "package": "commerce",
+    "exportName": "StockBadge",
+    "entry": "commerce/src/products.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react",
+      "@primedesign/commerce"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "bar-chart",
+    "package": "data",
+    "exportName": "BarChart",
+    "entry": "data/src/charts.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "bar-list",
+    "package": "data",
+    "exportName": "BarList",
+    "entry": "data/src/charts.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "data-table",
+    "package": "data",
+    "exportName": "DataTable",
+    "entry": "data/src/table.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "line-chart",
+    "package": "data",
+    "exportName": "LineChart",
+    "entry": "data/src/charts.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "pie-chart",
+    "package": "data",
+    "exportName": "PieChart",
+    "entry": "data/src/charts.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "proportion-bar",
+    "package": "data",
+    "exportName": "ProportionBar",
+    "entry": "data/src/charts.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "sparkline",
+    "package": "data",
+    "exportName": "Sparkline",
+    "entry": "data/src/charts.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "form",
+    "package": "forms",
+    "exportName": "Form",
+    "entry": "forms/src/form.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "form-field",
+    "package": "forms",
+    "exportName": "FormField",
+    "entry": "forms/src/form.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "form-wizard",
+    "package": "forms",
+    "exportName": "FormWizard",
+    "entry": "forms/src/form.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "schema-form",
+    "package": "forms",
+    "exportName": "SchemaForm",
+    "entry": "forms/src/form.tsx",
+    "dependencies": [
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "app-shell",
+    "package": "blocks",
+    "exportName": "AppShell",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "auth-card",
+    "package": "blocks",
+    "exportName": "AuthCard",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "conversation-view",
+    "package": "blocks",
+    "exportName": "ConversationView",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "dashboard-nav",
+    "package": "blocks",
+    "exportName": "DashboardNav",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "file-card",
+    "package": "blocks",
+    "exportName": "FileCard",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "inbox-layout",
+    "package": "blocks",
+    "exportName": "InboxLayout",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "kanban-board",
+    "package": "blocks",
+    "exportName": "KanbanBoard",
+    "entry": "blocks/src/workflows.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "notification-center",
+    "package": "blocks",
+    "exportName": "NotificationCenter",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "notification-preferences",
+    "package": "blocks",
+    "exportName": "NotificationPreferences",
+    "entry": "blocks/src/workflows.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "page-header",
+    "package": "blocks",
+    "exportName": "PageHeader",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "pricing-card",
+    "package": "blocks",
+    "exportName": "PricingCard",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "settings-panel",
+    "package": "blocks",
+    "exportName": "SettingsPanel",
+    "entry": "blocks/src/workflows.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "team-members",
+    "package": "blocks",
+    "exportName": "TeamMembers",
+    "entry": "blocks/src/workflows.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/react",
+      "@primedesign/icons",
+      "@primedesign/persian"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "ticket-list",
+    "package": "blocks",
+    "exportName": "TicketList",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "user-menu",
+    "package": "blocks",
+    "exportName": "UserMenu",
+    "entry": "blocks/src/blocks.tsx",
+    "dependencies": [
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react",
+      "react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "ai-message",
+    "package": "ai",
+    "exportName": "AIMessage",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "chain-of-thought",
+    "package": "ai",
+    "exportName": "ChainOfThought",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "chat",
+    "package": "ai",
+    "exportName": "Chat",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "checkpoint",
+    "package": "ai",
+    "exportName": "Checkpoint",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "confirmation",
+    "package": "ai",
+    "exportName": "Confirmation",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "context-usage",
+    "package": "ai",
+    "exportName": "ContextUsage",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "file-tree",
+    "package": "ai",
+    "exportName": "FileTree",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "inline-citation",
+    "package": "ai",
+    "exportName": "InlineCitation",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "model-selector",
+    "package": "ai",
+    "exportName": "ModelSelector",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "plan",
+    "package": "ai",
+    "exportName": "Plan",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "prompt-input",
+    "package": "ai",
+    "exportName": "PromptInput",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "queue",
+    "package": "ai",
+    "exportName": "Queue",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "reasoning",
+    "package": "ai",
+    "exportName": "Reasoning",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "sources",
+    "package": "ai",
+    "exportName": "Sources",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "stack-trace",
+    "package": "ai",
+    "exportName": "StackTrace",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "subagent-card",
+    "package": "ai",
+    "exportName": "SubagentCard",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "suggestions",
+    "package": "ai",
+    "exportName": "Suggestions",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "task-card",
+    "package": "ai",
+    "exportName": "TaskCard",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "terminal",
+    "package": "ai",
+    "exportName": "Terminal",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "test-results",
+    "package": "ai",
+    "exportName": "TestResults",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "tool-call",
+    "package": "ai",
+    "exportName": "ToolCall",
+    "entry": "ai/src/components.tsx",
+    "dependencies": [
+      "react",
+      "@primedesign/icons",
+      "@primedesign/persian",
+      "@primedesign/react"
+    ],
+    "fileCount": 1
+  },
+  {
+    "name": "icon",
+    "package": "icons",
+    "exportName": "Icon",
+    "entry": "icons/src/index.ts",
+    "dependencies": [
+      "react"
+    ],
+    "fileCount": 1
+  }
+]

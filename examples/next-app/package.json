@@ -1,25 +1,26 @@
 {
   "name": "primedesign-next-example",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "build": "next build --webpack",
     "dev": "next dev"
   },
   "dependencies": {
-    "@primedesign/data": "file:../../artifacts/primedesign-data-0.1.0.tgz",
-    "@primedesign/blocks": "file:../../artifacts/primedesign-blocks-0.1.0.tgz",
-    "@primedesign/react": "file:../../artifacts/primedesign-react-0.1.0.tgz",
-    "@primedesign/commerce": "file:../../artifacts/primedesign-commerce-0.1.0.tgz",
-    "@primedesign/forms": "file:../../artifacts/primedesign-forms-0.1.0.tgz",
-    "@primedesign/persian": "file:../../artifacts/primedesign-persian-0.1.0.tgz",
-    "@primedesign/icons": "file:../../artifacts/primedesign-icons-0.1.0.tgz",
-    "@primedesign/tokens": "file:../../artifacts/primedesign-tokens-0.1.0.tgz",
-    "@primedesign/css": "file:../../artifacts/primedesign-css-0.1.0.tgz",
-    "@primedesign/cli": "file:../../artifacts/primedesign-cli-0.1.0.tgz",
+    "@primedesign/data": "file:../../artifacts/primedesign-data-0.2.0.tgz",
+    "@primedesign/blocks": "file:../../artifacts/primedesign-blocks-0.2.0.tgz",
+    "@primedesign/react": "file:../../artifacts/primedesign-react-0.2.0.tgz",
+    "@primedesign/commerce": "file:../../artifacts/primedesign-commerce-0.2.0.tgz",
+    "@primedesign/forms": "file:../../artifacts/primedesign-forms-0.2.0.tgz",
+    "@primedesign/persian": "file:../../artifacts/primedesign-persian-0.2.0.tgz",
+    "@primedesign/icons": "file:../../artifacts/primedesign-icons-0.2.0.tgz",
+    "@primedesign/tokens": "file:../../artifacts/primedesign-tokens-0.2.0.tgz",
+    "@primedesign/css": "file:../../artifacts/primedesign-css-0.2.0.tgz",
+    "@primedesign/cli": "file:../../artifacts/primedesign-cli-0.2.0.tgz",
     "next": "^16.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "@primedesign/ai": "file:../../artifacts/primedesign-ai-0.2.0.tgz"
   },
   "devDependencies": {
     "typescript": "^5.8.2",

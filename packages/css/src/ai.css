@@ -1,0 +1,479 @@
+.pd-ai-chat {
+  display: flex;
+  flex-direction: column;
+}
+.pd-ai-chat > header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.3rem;
+  border-bottom: 1px solid var(--pd-border);
+}
+.pd-ai-chat > header > span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: var(--pd-brand-soft);
+  color: var(--pd-brand-text);
+  border-radius: 12px;
+}
+.pd-ai-chat > header > div {
+  flex: 1;
+}
+.pd-ai-chat > header strong {
+  font-size: 14px;
+  display: block;
+}
+.pd-ai-chat > header small {
+  font-size: 11px;
+  display: block;
+  color: var(--pd-secondary);
+}
+.pd-ai-chat .pd-message-scroller {
+  background: var(--pd-bg);
+}
+.pd-ai-message-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.pd-ai-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+}
+.pd-ai-welcome > svg {
+  color: var(--pd-brand-text);
+}
+.pd-ai-welcome h3 {
+  font-size: 20px;
+}
+.pd-ai-suggestions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pd-ai-suggestions .pd-button {
+  font-size: 11px;
+  white-space: normal;
+  text-align: start;
+}
+.pd-ai-prompt {
+  margin: 1rem;
+  border: 1px solid var(--pd-input-border);
+  border-radius: var(--pd-radius);
+  padding: 0.6rem;
+  background: var(--pd-surface);
+  box-shadow: 0 4px 14px #17233b04;
+}
+.pd-ai-prompt:focus-within {
+  border-color: var(--pd-brand);
+  box-shadow: var(--pd-focus);
+}
+.pd-ai-prompt .pd-textarea {
+  border: 0;
+  box-shadow: none;
+  resize: none;
+  min-height: 74px;
+  font-size: 13px;
+  padding: 0.5rem;
+}
+.pd-ai-prompt-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-top: 1px solid var(--pd-border);
+  padding-top: 0.5rem;
+  margin-top: 0.4rem;
+}
+.pd-ai-prompt-toolbar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pd-ai-prompt-toolbar .pd-select {
+  min-height: 32px;
+  font-size: 11px;
+  max-width: 160px;
+  border-color: var(--pd-border);
+}
+.pd-ai-files {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+.pd-ai-files > .pd-attachment {
+  max-width: 240px;
+}
+.pd-ai-regenerate {
+  margin-inline: auto;
+}
+.pd-ai-sources {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--pd-border);
+}
+.pd-ai-sources > strong {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 10px;
+  color: var(--pd-secondary);
+}
+.pd-ai-sources ol {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.pd-ai-sources a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem;
+  background: var(--pd-muted);
+  border-radius: 7px;
+}
+.pd-ai-sources a > span {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--pd-surface);
+  border-radius: 4px;
+  font-size: 9px;
+  flex-shrink: 0;
+}
+.pd-ai-sources a > div {
+  flex: 1;
+  min-width: 0;
+}
+.pd-ai-sources a strong {
+  display: block;
+  font-size: 10px;
+}
+.pd-ai-sources a small {
+  display: block;
+  font-size: 9px;
+}
+.pd-ai-citation {
+  display: inline-block;
+  padding: 0 0.3rem;
+  line-height: 1.6;
+  background: var(--pd-brand-soft);
+  border-radius: 4px;
+  font-size: 9px;
+  color: var(--pd-brand-text);
+}
+.pd-ai-source-preview {
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.4rem;
+  font-size: 12px;
+}
+.pd-ai-source-preview a {
+  font-size: 10px;
+  color: var(--pd-brand-text);
+  overflow-wrap: anywhere;
+}
+.pd-ai-source-preview p {
+  font-size: 11px;
+  color: var(--pd-secondary);
+}
+.pd-ai-tool {
+  padding: 1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+.pd-ai-tool > header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.pd-ai-tool > header > strong {
+  font:
+    600 12px ui-monospace,
+    monospace;
+  margin-inline-end: auto;
+}
+.pd-ai-tool > header > small {
+  font-size: 9px;
+}
+.pd-ai-tool .pd-collapsible {
+  border-radius: 8px;
+}
+.pd-ai-confirmation {
+  padding: 1.2rem;
+  display: grid;
+  gap: 0.8rem;
+}
+.pd-ai-confirmation > strong {
+  font-size: 14px;
+}
+.pd-ai-confirmation > p {
+  font-size: 12px;
+  color: var(--pd-secondary);
+}
+.pd-ai-confirmation > div:not(.pd-error) {
+  display: flex;
+  gap: 0.6rem;
+}
+.pd-ai-checkpoint {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1px dashed var(--pd-border);
+  border-radius: 12px;
+  background: var(--pd-surface);
+}
+.pd-ai-checkpoint > svg {
+  color: var(--pd-brand-text);
+}
+.pd-ai-checkpoint > div {
+  flex: 1;
+  min-width: 0;
+}
+.pd-ai-checkpoint strong {
+  font-size: 12px;
+  display: block;
+}
+.pd-ai-checkpoint small {
+  font-size: 10px;
+  display: block;
+}
+.pd-ai-context {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1rem;
+  border: 1px solid var(--pd-border);
+  border-radius: 10px;
+  background: var(--pd-surface);
+}
+.pd-ai-context > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.pd-ai-context strong {
+  font-size: 12px;
+}
+.pd-ai-context small {
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.pd-ai-plan {
+  padding: 1.2rem;
+}
+.pd-ai-plan h3 {
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+.pd-ai-plan ol {
+  display: grid;
+  gap: 0.9rem;
+}
+.pd-ai-plan li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.pd-ai-plan li > span {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--pd-muted);
+  font-size: 11px;
+}
+.pd-ai-plan li > div {
+  flex: 1;
+}
+.pd-ai-plan strong {
+  font-size: 12px;
+  display: block;
+}
+.pd-ai-plan small {
+  font-size: 10px;
+  display: block;
+}
+.pd-ai-task {
+  padding: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+.pd-ai-task > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.pd-ai-task strong {
+  font-size: 12px;
+}
+.pd-ai-task > p {
+  font-size: 11px;
+  color: var(--pd-secondary);
+}
+.pd-ai-queue {
+  border: 1px solid var(--pd-border);
+  border-radius: 12px;
+  background: var(--pd-surface);
+  padding: 1rem;
+}
+.pd-ai-queue > h3 {
+  font-size: 13px;
+  margin-bottom: 0.8rem;
+}
+.pd-ai-queue ul {
+  display: grid;
+  gap: 0.6rem;
+}
+.pd-ai-queue li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: 1px solid var(--pd-border);
+  padding-top: 0.6rem;
+}
+.pd-ai-queue strong {
+  font-size: 11px;
+  flex: 1;
+}
+.pd-ai-terminal {
+  position: relative;
+}
+.pd-ai-terminal > .pd-badge {
+  position: absolute;
+  inset-inline-end: 1rem;
+  bottom: 1rem;
+}
+.pd-ai-tests {
+  padding: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+.pd-ai-tests > h3 {
+  font-size: 13px;
+}
+.pd-ai-tests > div {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.pd-ai-tests li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--pd-border);
+  flex-wrap: wrap;
+}
+.pd-ai-tests li > strong {
+  font-size: 11px;
+  flex: 1;
+}
+.pd-ai-tests li > small {
+  font-size: 9px;
+}
+.pd-ai-tests li > pre {
+  width: 100%;
+  padding: 0.6rem;
+  background: var(--pd-danger-bg);
+  color: var(--pd-danger);
+  white-space: pre-wrap;
+  font-size: 11px;
+  border-radius: 6px;
+}
+.pd-ai-file-tree {
+  display: grid;
+  gap: 0.25rem;
+  font:
+    12px ui-monospace,
+    monospace;
+}
+.pd-ai-file-tree details {
+  padding-inline-start: 0.7rem;
+}
+.pd-ai-file-tree summary {
+  cursor: pointer;
+  padding: 0.4rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.pd-ai-file-tree button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: start;
+  background: none;
+  border: 0;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  font: inherit;
+}
+.pd-ai-file-tree button:hover,
+.pd-ai-file-tree button[aria-pressed='true'] {
+  background: var(--pd-brand-soft);
+  color: var(--pd-brand-text);
+}
+.pd-ai-subagent {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.pd-ai-subagent > header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.pd-ai-subagent > header > div {
+  flex: 1;
+}
+.pd-ai-subagent strong {
+  font-size: 12px;
+  display: block;
+}
+.pd-ai-subagent small {
+  font-size: 10px;
+  display: block;
+}
+@media (max-width: 640px) {
+  .pd-ai-chat > header {
+    padding: 1rem;
+  }
+  .pd-ai-prompt {
+    margin: 0.65rem;
+  }
+  .pd-ai-chat > header small {
+    font-size: 10px;
+  }
+  .pd-ai-checkpoint {
+    flex-wrap: wrap;
+  }
+  .pd-ai-confirmation > div {
+    flex-wrap: wrap;
+  }
+  .pd-ai-prompt-toolbar .pd-select {
+    max-width: 120px;
+    font-size: 10px;
+  }
+  .pd-ai-welcome {
+    padding: 1.25rem;
+  }
+  .pd-ai-welcome h3 {
+    font-size: 18px;
+  }
+}

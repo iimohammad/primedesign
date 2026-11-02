@@ -5,10 +5,9 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: Object.fromEntries(
-      ['tokens', 'persian', 'icons', 'react', 'forms', 'data', 'commerce', 'blocks'].map((p) => [
-        `@primedesign/${p}`,
-        resolve(`packages/${p}/src/index.ts`),
-      ]),
+      ['tokens', 'persian', 'icons', 'react', 'forms', 'data', 'commerce', 'blocks', 'ai'].map(
+        (p) => [`@primedesign/${p}`, resolve(`packages/${p}/src/index.ts`)],
+      ),
     ),
   },
   test: {

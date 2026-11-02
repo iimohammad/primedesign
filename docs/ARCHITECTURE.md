@@ -1,8 +1,8 @@
 # Architecture
 
-PrimeDesign is an original implementation with ten independently packaged workspaces. It does not depend on Kashi.
+PrimeDesign is an original implementation with twelve independently packaged workspaces. It does not depend on Kashi.
 
-`tokens` and `persian` are server-safe. `css` compiles token CSS, scoped resets, components and commerce styles into cascade layers. `icons` contains small SVG React functions. `react` is the common interactive layer. `forms`, `data`, `commerce` and `blocks` compose it without depending on any backend. `cli` generates application-owned facades rather than downloading or executing remote templates.
+`tokens` and `persian` are server-safe. `css` compiles token CSS, scoped resets, components and commerce styles into cascade layers. `icons` contains small SVG React functions. `react` is the common interactive layer. `forms`, `data`, `commerce` and `blocks` compose it without depending on any backend. `ai` composes chat and agent-facing UI with application-owned data and transport. `elements` bundles the same implementations behind browser custom elements, with a shared React root per provider and portals into Shadow DOM. It includes its rendering runtime. `cli` generates facades or copies local implementation graphs from a hashed offline source registry; it never executes remote templates.
 
 ## Boundaries
 

@@ -1,0 +1,524 @@
+[
+  {
+    "reference": "Accordion",
+    "components": ["Accordion"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Alert",
+    "components": ["Alert"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Alert Dialog",
+    "components": ["ConfirmDialog"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Aspect Ratio",
+    "components": ["AspectRatio"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Attachment",
+    "components": ["Attachment"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Avatar",
+    "components": ["Avatar", "AvatarGroup"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Badge",
+    "components": ["Badge"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Breadcrumb",
+    "components": ["Breadcrumb"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Bubble",
+    "components": ["MessageBubble"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Button",
+    "components": ["Button"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Button Group",
+    "components": ["ButtonGroup"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Calendar",
+    "components": ["Calendar"],
+    "partial": true,
+    "note": "تقویم این نسخه جلالی است؛ تقویم میلادی ارائه نشده است."
+  },
+  {
+    "reference": "Card",
+    "components": ["Card", "CardHeader", "CardBody", "CardFooter"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Carousel",
+    "components": ["Carousel"],
+    "partial": true,
+    "note": "ناوبری و swipe پایه؛ API افزونه‌های Embla و autoplay ارائه نشده است."
+  },
+  {
+    "reference": "Chart",
+    "components": ["BarChart", "LineChart", "PieChart", "Sparkline"],
+    "partial": true,
+    "note": "چهار نوع نمودار SVG با دادهٔ ورودی؛ اکوسیستم و انعطاف Recharts را ندارد."
+  },
+  {
+    "reference": "Checkbox",
+    "components": ["Checkbox"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Code Block",
+    "components": ["CodeBlock"],
+    "partial": true,
+    "note": "نمایش امن متن، کپی و شمارهٔ خط؛ هایلایت نحوی داخلی ندارد."
+  },
+  {
+    "reference": "Collapsible",
+    "components": ["Collapsible"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Combobox",
+    "components": ["Combobox", "MultiSelect"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Command",
+    "components": ["CommandPalette"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Context Menu",
+    "components": ["ContextMenu"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Data Table",
+    "components": ["DataTable"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Date Picker",
+    "components": ["DatePicker", "DateRangePicker"],
+    "partial": true,
+    "note": "انتخاب تاریخ و بازه روی تقویم جلالی، با min/max و صفحه‌کلید."
+  },
+  {
+    "reference": "Dialog",
+    "components": ["Dialog"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Direction",
+    "components": ["DirectionProvider"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Drawer",
+    "components": ["Drawer"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Dropdown Menu",
+    "components": ["DropdownMenu"],
+    "partial": true,
+    "note": "منوی تخت با کیبورد؛ زیرمنوی تو در تو و منوهای checkbox/radio ارائه نشده است."
+  },
+  {
+    "reference": "Empty",
+    "components": ["EmptyState"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Field",
+    "components": ["Field"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Hover Card",
+    "components": ["HoverCard"],
+    "partial": true,
+    "note": "بازشدن با hover/focus و تأخیر؛ سیستم positioning خارجی ندارد."
+  },
+  {
+    "reference": "Input",
+    "components": ["Input"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Input Group",
+    "components": ["InputGroup", "InputGroupAddon", "InputGroupInput"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Input OTP",
+    "components": ["OtpInput"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Item",
+    "components": ["Item", "ItemGroup"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Kbd",
+    "components": ["Kbd"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Label",
+    "components": ["Label"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Marker",
+    "components": ["Marker"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Menubar",
+    "components": ["Menubar"],
+    "partial": true,
+    "note": "جابجایی کیبورد و منوهای تخت؛ زیرمنوهای چندسطحی ندارد."
+  },
+  {
+    "reference": "Message",
+    "components": ["AIMessage", "MessageBubble"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Message Scroller",
+    "components": ["MessageScroller"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Native Select",
+    "components": ["Select"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Navigation Menu",
+    "components": ["NavigationMenu"],
+    "partial": true,
+    "note": "الگوی disclosure با لینک‌ها؛ mega-menu و انیمیشن viewport ارائه نشده است."
+  },
+  {
+    "reference": "Pagination",
+    "components": ["Pagination"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Popover",
+    "components": ["Popover"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Progress",
+    "components": ["Progress"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Questionnaire",
+    "components": ["Questionnaire"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Radio Group",
+    "components": ["RadioGroup"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Resizable",
+    "components": ["ResizablePanelGroup", "Splitter"],
+    "partial": true,
+    "note": "تقسیم پنل، min/max، کیبورد، pointer و ذخیرهٔ اندازه؛ API آن با مرجع متفاوت است."
+  },
+  {
+    "reference": "Scroll Area",
+    "components": ["ScrollArea"],
+    "partial": true,
+    "note": "اسکرول بومی مرورگر با استایل؛ scrollbar سفارشی headless نیست."
+  },
+  {
+    "reference": "Select",
+    "components": ["Select", "Combobox"],
+    "partial": true,
+    "note": "Select بومی HTML است؛ برای جست‌وجو از Combobox استفاده کنید. قرارداد headless یکسان نیست."
+  },
+  {
+    "reference": "Separator",
+    "components": ["Separator"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Sheet",
+    "components": ["Drawer"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Sidebar",
+    "components": ["Sidebar", "SidebarTrigger"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Skeleton",
+    "components": ["Skeleton"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Slider",
+    "components": ["Slider"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Spinner",
+    "components": ["Spinner"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Switch",
+    "components": ["Switch"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Table",
+    "components": ["Table", "TableHeader", "TableBody", "TableRow", "TableHead", "TableCell"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Tabs",
+    "components": ["Tabs"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Textarea",
+    "components": ["Textarea"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Toast",
+    "components": ["ToastProvider"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Toggle",
+    "components": ["Toggle"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Toggle Group",
+    "components": ["ToggleGroup"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Tooltip",
+    "components": ["Tooltip"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Trace",
+    "components": ["Trace"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "Typography",
+    "components": ["Typography"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Chain of Thought",
+    "components": ["ChainOfThought"],
+    "partial": false,
+    "note": "فقط رویدادها یا خلاصهٔ قابل انتشارِ ارائه‌شده از برنامه را نمایش می‌دهد."
+  },
+  {
+    "reference": "AI: Chat",
+    "components": ["Chat"],
+    "partial": false,
+    "note": "رابط کنترل‌شده؛ بک‌اند، احراز هویت و مدل باید توسط برنامه وصل شوند."
+  },
+  {
+    "reference": "AI: Checkpoint",
+    "components": ["Checkpoint"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Confirmation",
+    "components": ["Confirmation"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Context",
+    "components": ["ContextUsage"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: File Tree",
+    "components": ["FileTree"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Inline Citation",
+    "components": ["InlineCitation"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Message",
+    "components": ["AIMessage"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Model Selector",
+    "components": ["ModelSelector"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Plan",
+    "components": ["Plan"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Prompt Input",
+    "components": ["PromptInput"],
+    "partial": false,
+    "note": "متن، پیوست، مدل، توقف، حالت ارسال و خطا؛ آپلود فایل مسئولیت برنامه است."
+  },
+  {
+    "reference": "AI: Queue",
+    "components": ["Queue"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Reasoning",
+    "components": ["Reasoning"],
+    "partial": false,
+    "note": "نمایش خلاصهٔ ارائه‌شده؛ هیچ استدلال یا دادهٔ داخلی از مدل استخراج نمی‌کند."
+  },
+  {
+    "reference": "AI: Sources",
+    "components": ["Sources"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Stack Trace",
+    "components": ["StackTrace"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Subagent",
+    "components": ["SubagentCard"],
+    "partial": false,
+    "note": "نمایش وضعیت ورودی؛ عامل یا ابزار اجرا نمی‌کند."
+  },
+  {
+    "reference": "AI: Suggestion",
+    "components": ["Suggestions"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Task",
+    "components": ["TaskCard"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Terminal",
+    "components": ["Terminal"],
+    "partial": false,
+    "note": "نمایش متن خروجی؛ دستور اجرا نمی‌کند."
+  },
+  {
+    "reference": "AI: Test Results",
+    "components": ["TestResults"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  },
+  {
+    "reference": "AI: Tool",
+    "components": ["ToolCall"],
+    "partial": false,
+    "note": "پیاده‌سازی مستقل با API و توکن‌های PrimeDesign؛ سازگاری API با shadcn ادعا نمی‌شود."
+  }
+]

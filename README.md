@@ -1,12 +1,12 @@
 # PrimeDesign · پرایم دیزاین
 
-یک دیزاین‌سیستم مستقل و فارسی برای ساخت فروشگاه، داشبورد و محصولات دیجیتال با **React و Next.js**؛ شامل CSS مستقل، تم چندبرندی، ابزارهای فارسی، فرم، جدول و مجموعهٔ فروشگاهی.
+یک دیزاین‌سیستم مستقل و فارسی برای ساخت فروشگاه، داشبورد و محصولات دیجیتال با **React، Next.js، HTML و WordPress**؛ شامل CSS مستقل، تم چندبرندی، ابزارهای فارسی، فرم، جدول و مجموعهٔ فروشگاهی.
 
 ![CI](https://github.com/iimohammad/primedesign/actions/workflows/ci.yml/badge.svg)
 
 ![PrimeDesign preview](docs/images/overview.png)
 
-[مشاهدهٔ تصویر مجموعهٔ فروشگاهی](docs/images/commerce.png)
+[مشاهدهٔ تصویر مجموعهٔ فروشگاهی](docs/images/commerce.png) · [تصویر نسخهٔ HTML و وردپرس](docs/images/universal.png)
 
 ## اجرا
 
@@ -26,18 +26,33 @@ npm run preview -w @primedesign/docs -- --host 0.0.0.0
 
 ## پکیج‌ها
 
-| پکیج                    | مسئولیت                                                             |
-| ----------------------- | ------------------------------------------------------------------- |
-| `@primedesign/tokens`   | توکن‌های معنایی، طیف برند، ساخت تم و محاسبهٔ کنتراست                |
-| `@primedesign/css`      | استایل مستقل، Cascade Layers، فونت وزیرمتن و خروجی بدون فونت        |
-| `@primedesign/persian`  | تاریخ شمسی، ارقام، پول، جست‌وجوی فارسی و اعتبارسنجی‌های ساختاری     |
-| `@primedesign/icons`    | مجموعهٔ SVG با تایپ و نام دسترس‌پذیر                                |
-| `@primedesign/react`    | کنترل‌ها، انتخاب‌ها، تقویم، پنجره‌ها، اعلان، ناوبری و آپلود         |
-| `@primedesign/forms`    | فرم تایپ‌شده، SchemaForm، مراحل، آرایهٔ فیلدها، خطا و پیش‌نویس      |
-| `@primedesign/data`     | جدول پیشرفته، حالت سرور، اسکرول مجازی و نمودارهای دارای معادل جدولی |
-| `@primedesign/commerce` | کارت‌ها و رفتار سبد، علاقه‌مندی، مقایسه و سفارش                     |
-| `@primedesign/blocks`   | پوستهٔ پنل، تیکت، گفتگو، اعلان، پلن، ورود و فایل                    |
-| `@primedesign/cli`      | راه‌اندازی پروژه، تولید facade قابل ویرایش و خروجی تم               |
+| پکیج                    | مسئولیت                                                                     |
+| ----------------------- | --------------------------------------------------------------------------- |
+| `@primedesign/tokens`   | توکن‌های معنایی، طیف برند، ساخت تم و محاسبهٔ کنتراست                        |
+| `@primedesign/css`      | استایل مستقل، Cascade Layers، فونت وزیرمتن و خروجی بدون فونت                |
+| `@primedesign/persian`  | تاریخ شمسی، ارقام، پول، جست‌وجوی فارسی و اعتبارسنجی‌های ساختاری             |
+| `@primedesign/icons`    | مجموعهٔ SVG با تایپ و نام دسترس‌پذیر                                        |
+| `@primedesign/react`    | کنترل‌ها، انتخاب‌ها، تقویم، پنجره‌ها، اعلان، ناوبری و آپلود                 |
+| `@primedesign/forms`    | فرم تایپ‌شده، SchemaForm، مراحل، آرایهٔ فیلدها، خطا و پیش‌نویس              |
+| `@primedesign/data`     | جدول پیشرفته، حالت سرور، اسکرول مجازی و نمودارهای دارای معادل جدولی         |
+| `@primedesign/commerce` | کارت‌ها و رفتار سبد، علاقه‌مندی، مقایسه و سفارش                             |
+| `@primedesign/blocks`   | پوستهٔ پنل، تیکت، گفتگو، اعلان، پلن، ورود و فایل                            |
+| `@primedesign/ai`       | چت، ورودی پیام، منابع، ابزارها، وظیفه‌ها و transport استریم                 |
+| `@primedesign/elements` | Web Components و خروجی مستقل مرورگر، بدون نیاز به نصب React توسط مصرف‌کننده |
+| `@primedesign/cli`      | راه‌اندازی، نصب سورس قابل ویرایش، بررسی اختلاف و ساخت تم                    |
+
+## خروجی آمادهٔ HTML و وردپرس
+
+- [دانلود نسخهٔ مرورگر ۰.۲.۰](downloads/primedesign-browser-0.2.0.zip): فایل HTML، اسکریپت مستقل، استایل و فونت.
+- [دانلود افزونهٔ وردپرس ۰.۲.۰](downloads/primedesign-wordpress-0.2.0.zip): شورت‌کد، بلوک Gutenberg و اتصال کارت محصول به WooCommerce.
+- [راهنمای همهٔ فرانت‌اندها و نصب افزونه](docs/UNIVERSAL.md). مصرف‌کنندهٔ HTML به نصب React نیاز ندارد؛ runtime داخلی در بسته قرار دارد.
+
+```html
+<script src="./primedesign-elements.js"></script>
+<pd-provider locale="fa-IR" theme="light">
+  <pd-button variant="outline">شروع کن</pd-button>
+</pd-provider>
+```
 
 ## مجموعهٔ فروشگاهی
 
@@ -45,7 +60,7 @@ npm run preview -w @primedesign/docs -- --host 0.0.0.0
 - تصویر و fallback، قیمت قبلی و فعلی، تخفیف، موجودی کم، ناموجود، امتیاز، رنگ و variant.
 - رویدادهای افزودن به سبد، علاقه‌مندی، مقایسه و مشاهدهٔ سریع؛ حالت انتظار و خطای درخواست.
 - `ProductGrid`, `ProductCardSkeleton`, `ProductGallery`, `QuickView`.
-- `CategoryCard`, `PromoCard`, `BrandCard`, `ReviewCard`.
+- `CategoryCard`, `PromoCard`, `BrandCard`, `ReviewCard`, `SellerCard`, `CouponCard`, `BundleCard`, `ProductDetail`.
 - `CartProvider`, `CartLineItem`, `MiniCart`, `CartSummary`, `CouponInput`, `FreeShippingProgress`.
 - `AddressCard`, `ShippingMethodPicker`, `CheckoutStepper`, `OrderCard`, `OrderTracking`, `CompareTable`.
 
@@ -110,7 +125,20 @@ export function App({ product }) {
 
 برای فونت دارای مجوز خودتان از `@primedesign/css/nofont.css` استفاده کنید و `@font-face` را در برنامهٔ خود تعریف کنید. وزیرمتن همراه پکیج است و فایل مجوز OFL آن هم توزیع می‌شود. یکان‌بخ همراه این ریپو نیست.
 
-CSS کامل در لایه‌های `primedesign.*` قرار دارد؛ CSS بدون لایهٔ برنامهٔ شما اولویت بالاتری دارد. فایل‌های جداگانهٔ `tokens.css`, `base.css`, `components.css`, `commerce.css` هم ارائه می‌شوند. برای استفاده با HTML، کلاس‌ها و CSS قابل استفاده‌اند؛ رفتار تعاملی باید توسط برنامهٔ میزبان پیاده‌سازی شود.
+CSS کامل در لایه‌های `primedesign.*` قرار دارد؛ CSS بدون لایهٔ برنامهٔ شما اولویت بالاتری دارد. فایل‌های جداگانهٔ `tokens.css`, `base.css`, `components.css`, `commerce.css` هم ارائه می‌شوند. برای HTML تعاملی از `@primedesign/elements` و تگ‌های `pd-*` استفاده کنید. CSS به‌تنهایی فقط ظاهر را ارائه می‌کند. فایل‌های `advanced.css` و `ai.css` هم جداگانه موجودند.
+
+## سورس قابل ویرایش و اجزای پیشرفته
+
+```bash
+primedesign add button product-card --source
+primedesign search chat
+primedesign diff product-card
+primedesign doctor
+```
+
+۱۸۸ ورودی سورس از پیاده‌سازی‌های همین پروژه تولید می‌شود. نصب سورس شامل ماژول اصلی و وابستگی‌های محلی آن است؛ فایل‌های دست‌خورده بدون `--force` جایگزین نمی‌شوند. [راهنمای رجیستری](docs/SOURCE-REGISTRY.md).
+
+پنل قابل تغییر اندازه، Sidebar، ContextMenu، Menubar، NavigationMenu، ToggleGroup، پرسش‌نامه، کدبلاک، Kanban، اعضای تیم، تنظیمات و اجزای AI به مجموعه اضافه شده‌اند. صفحهٔ «مقایسهٔ پوشش» در مستندات معادل‌ها و محدودیت‌ها نسبت به shadcn را نشان می‌دهد؛ یکسانی API یا برتری کامل اکوسیستم ادعا نمی‌شود.
 
 ## کیفیت
 
@@ -126,6 +154,8 @@ npm run format:check
 
 ## مستندات توسعه
 
+- [راهنمای HTML، وردپرس و فریم‌ورک‌های دیگر](docs/UNIVERSAL.md)
+- [نصب سورس و رجیستری](docs/SOURCE-REGISTRY.md)
 - [معماری](docs/ARCHITECTURE.md)
 - [راهنمای اتصال به Next.js و Django](docs/INTEGRATION.md)
 - [پروژهٔ نمونهٔ Next.js با نصب بسته‌های واقعی](examples/next-app/README.md)

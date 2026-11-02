@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PrimeDesign · HTML</title>
+    <style>
+      body {
+        margin: 0;
+        background: #f7f8fc;
+      }
+      pd-provider {
+        display: block;
+        min-height: 100vh;
+        padding: 24px;
+      }
+      main {
+        max-width: 1050px;
+        margin: auto;
+      }
+      .html-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 20px;
+        margin: 24px 0;
+      }
+      .html-controls {
+        display: grid;
+        gap: 16px;
+        padding: 24px;
+        background: var(--pd-surface, #fff);
+        border: 1px solid var(--pd-border, #dce2ed);
+        border-radius: 16px;
+      }
+      pd-button {
+        display: inline-block;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      pd-chat {
+        display: block;
+        margin: 24px 0;
+      }
+      #events {
+        font: 12px/1.8 monospace;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      small {
+        color: #52617a;
+      }
+    </style>
+  </head>
+  <body>
+    <pd-provider id="scope" locale="fa-IR" brand="#6254df"
+      ><main>
+        <header>
+          <div>
+            <h1>یک کتابخانه، برای هر فرانت‌اند.</h1>
+            <small>این صفحه HTML خالص است؛ بستهٔ مرورگر runtime موردنیاز را همراه دارد.</small>
+          </div>
+          <pd-button id="theme-button" variant="outline">تغییر تم</pd-button>
+        </header>
+        <div class="html-grid">
+          <pd-product-card id="product"></pd-product-card
+          ><pd-cart-summary id="summary"></pd-cart-summary>
+        </div>
+        <div class="html-grid">
+          <form id="native-form" class="html-controls">
+            <h2>فرم استاندارد HTML</h2>
+            <pd-input label="نام شما" name="customer" required></pd-input
+            ><pd-date-picker label="تاریخ" name="date"></pd-date-picker
+            ><pd-button type="submit">ثبت فرم</pd-button><output id="form-result"></output>
+          </form>
+          <div class="html-controls">
+            <h2>کامپوننت‌های تعاملی</h2>
+            <pd-tabs id="tabs"></pd-tabs><pd-button id="open-dialog">باز کردن پنجره</pd-button
+            ><pd-dialog id="dialog" title="پنجرهٔ HTML"
+              ><p>محتوای این پنجره از slot استاندارد HTML می‌آید.</p>
+              <label>نام داخل پنجره <input name="inside" data-pd-autofocus /></label></pd-dialog
+            ><pd-context-menu id="context"
+              ><div style="padding: 20px; border: 1px dashed #8290a5; border-radius: 10px">
+                راست‌کلیک یا Shift+F10
+              </div></pd-context-menu
+            >
+          </div>
+        </div>
+        <pd-form id="schema"></pd-form><pd-chat id="chat"></pd-chat>
+        <h2>رویدادهای JavaScript</h2>
+        <pre id="events">منتظر یک رویداد…</pre>
+      </main></pd-provider
+    >
+    <script src="./primedesign-elements.js"></script>
+    <script>
+      const product = document.getElementById('product');
+      product.props = {
+        product: {
+          id: 'headphones',
+          title: 'هدفون نوا پرو',
+          subtitle: 'کارت محصول در HTML خالص',
+          price: 3490000,
+          originalPrice: 4200000,
+          stock: 3,
+          rating: 4.8,
+          brand: 'NOVA',
+          image: './products/headphones.svg',
+          variants: [
+            { id: 'purple', label: 'بنفش', color: '#7e71ca', stock: 3 },
+            { id: 'black', label: 'مشکی', color: '#292b39', stock: 2 },
+          ],
+        },
+        onQuickView: function () {
+          document.getElementById('dialog').setAttribute('open', 'true');
+        },
+      };
+      document.getElementById('summary').props = {
+        onCheckout: function () {
+          document.getElementById('events').textContent =
+            'برای ثبت سفارش واقعی، این رویداد را به API خود متصل کنید.';
+        },
+      };
+      document.getElementById('tabs').props = {
+        label: 'تب HTML',
+        items: [
+          { value: 'one', label: 'معرفی', content: 'محتوای تب اول' },
+          { value: 'two', label: 'جزئیات', content: 'محتوای تب دوم' },
+        ],
+      };
+      document.getElementById('context').props = {
+        label: 'منوی HTML',
+        items: [
+          {
+            id: 'copy',
+            label: 'کپی',
+            onSelect: function () {
+              document.getElementById('events').textContent = 'کپی انتخاب شد';
+            },
+          },
+        ],
+      };
+      document.getElementById('open-dialog').addEventListener('pd-click', function () {
+        document.getElementById('dialog').setAttribute('open', 'true');
+      });
+      document.getElementById('theme-button').addEventListener('pd-click', function () {
+        const scope = document.getElementById('scope');
+        scope.setAttribute('theme', scope.getAttribute('theme') === 'dark' ? 'light' : 'dark');
+      });
+      document.getElementById('schema').props = {
+        defaultValues: { name: '', email: '' },
+        fields: [
+          { name: 'name', label: 'نام در فرم Schema', type: 'text', rules: ['required'] },
+          { name: 'email', label: 'ایمیل', type: 'email', rules: ['required', 'email'] },
+        ],
+        submitLabel: 'ذخیرهٔ Schema',
+      };
+      document.getElementById('schema').addEventListener('pd-submit', function (event) {
+        document.getElementById('events').textContent = JSON.stringify(event.detail.value, null, 2);
+      });
+      document.getElementById('native-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.getElementById('form-result').textContent = JSON.stringify(
+          Object.fromEntries(new FormData(event.currentTarget)),
+        );
+      });
+      document.addEventListener('pd-add-to-cart', function (event) {
+        document.getElementById('events').textContent =
+          'pd-add-to-cart\n' +
+          JSON.stringify(
+            event.detail.args.map(function (value) {
+              return value;
+            }),
+            null,
+            2,
+          );
+      });
+      document.getElementById('chat').props = {
+        title: 'رابط چت در HTML',
+        description: 'نمونهٔ رابط؛ سرویس AI متصل نیست.',
+        messages: [
+          {
+            id: 'welcome',
+            role: 'assistant',
+            content:
+              'این پیام نمونه است. برای پاسخ واقعی، رویداد pd-submit را به سرویس خود وصل کنید.',
+          },
+        ],
+      };
+      document.getElementById('chat').addEventListener('pd-submit', function (event) {
+        document.getElementById('events').textContent = 'Prompt: ' + event.detail.value.text;
+      });
+    </script>
+  </body>
+</html>

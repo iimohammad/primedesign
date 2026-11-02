@@ -26,6 +26,7 @@ export {
   OrderTracking,
   CompareTable,
 } from './checkout.js';
+export { ProductDetail, BundleCard, SellerCard, CouponCard } from './merchandising.js';
 export {
   ProductImage,
   Price,
